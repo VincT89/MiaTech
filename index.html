@@ -22,8 +22,11 @@
     <!-- Sezione 1: Contenuto introduttivo e articoli -->
     <section>
       <h1>La Gazzetta del Dev</h1>
-      <img src="https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU"
-        alt="Banner della Gazzetta del Dev" width="400" height="200">
+      <picture style="display: block; max-width: 80%; ">
+        <source media="(min-width: 968px)" srcset="grande.jpg">
+        <source media="(min-width: 600px)" srcset="media.jpg">
+        <img src="piccola.jpg" alt="Immagine copertina Gazzetta del Dev" style="width: 100%; height: auto;">
+      </picture>
       <p>Benvenuti alla Gazzetta del Dev, il vostro punto di riferimento per le ultime novità e tendenze nel mondo dello
         sviluppo software!</p>
 
@@ -45,15 +48,24 @@
       </ul>
       <dl>
         <dt>Python</dt>
-        <img src="https://www.programmareinpython.it/media/images/python-logo-generic.width-800_Hg2JZoX.png"
-          alt="immagine di Python" width="200" height="100">
+        <figure>
+          <img src="https://www.programmareinpython.it/media/images/python-logo-generic.width-800_Hg2JZoX.png"
+            alt="immagine di Python" width="200" height="100">
+          <figcaption>Logo di Python</figcaption>
+        </figure>
         <dd>Un linguaggio di programmazione versatile e potente, ideale per principianti e professionisti.</dd>
         <dt>JavaScript</dt>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="immagine di JavaScript"
-          width="200" height="100">
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+            alt="immagine di JavaScript" width="200" height="100">
+          <figcaption>Logo di JavaScript</figcaption>
+        </figure>
         <dd>Il linguaggio di scripting per il web, fondamentale per lo sviluppo di applicazioni web interattive.</dd>
         <dt>React</dt>
-        <img src="https://reactjs.org/logo-og.png" alt="immagine di React" width="200" height="100">
+        <figure>
+          <img src="https://reactjs.org/logo-og.png" alt="immagine di React" width="200" height="100">
+          <figcaption>Logo di React</figcaption>
+        </figure>
         <dd>Una libreria JavaScript per costruire interfacce utente, sviluppata da Facebook.</dd>
       </dl>
     </section>
