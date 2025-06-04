@@ -150,15 +150,21 @@
       <h2>Iscriviti alla nostra newsletter</h2>
       <p>Rimani aggiornato con le ultime notizie e articoli direttamente nella tua casella di posta!</p>
       <div>
-        <form action="" style="display: flex; flex-direction: column; max-width: 350px; gap: 10px;">
+        <form action="" style="display: flex; flex-direction: column; max-width: 350px; gap: 12px;">
+        <label for="nome">Nome</label>
         <input type="text" name="nome" placeholder="Il tuo nome" required>
+        <label for="cognome">Cognome</label>
+        <input type="text" name="cognome" placeholder="Il tuo cognome" required>
+        <label for="genere">Genere</label>
         <div>
           <label for="maschio">Maschio</label>
           <input type="radio" name="genere" value="femmina" id="femmina">
           <label for="femmina">Femmina</label>
           <input type="radio" name="genere" value="maschio" id="maschio">
         </div>
+        <label for="email">Email</label>
         <input type="email" name="email" placeholder="La tua email" required>
+        <label for="messaggio">Messaggio</label>
         <textarea cols="30" rows="10" name="messaggio" id="messaggio" placeholder="Il tuo messaggio" required></textarea>
         <label for="privacy">
           <input type="checkbox" name="privacy" id="privacy" required>
