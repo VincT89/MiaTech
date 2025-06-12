@@ -50,3 +50,8 @@ a:hover{
 ul li:last-child {
   color: green;
 }
+
+#rgb-color{
+  color: rgb(241, 6, 6);
+  text-align: center;
+}
