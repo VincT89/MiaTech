@@ -70,3 +70,15 @@ ul li:last-child {
   color: red;
   text-align: center;
 }
+
+.p-footer{
+  text-align: center;
+}
+
+#paragraf-footer{
+  text-align: right;
+}
+
+footer p{
+  text-align: left;
+}
