@@ -55,3 +55,8 @@ ul li:last-child {
   color: rgb(241, 6, 6);
   text-align: center;
 }
+
+#hex-color{
+  color: #ed0d0d;
+  text-align: center;
+}
