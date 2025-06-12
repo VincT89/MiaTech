@@ -24,3 +24,12 @@ h6{
 .zoom{
   font-size: 30px;
 }
+
+.center{
+  text-align: center;
+}
+
+.klein{
+  box-shadow: 2px 2px black;
+  background-color: bisque;
+}
