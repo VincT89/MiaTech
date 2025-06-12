@@ -60,3 +60,8 @@ ul li:last-child {
   color: #ed0d0d;
   text-align: center;
 }
+
+#rgba-color{
+  color: rgba(255, 0, 0, 1.0);
+  text-align: center;
+}
