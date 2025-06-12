@@ -1,48 +1,54 @@
-h1{
+h1 {
   color: red;
 }
-h2{
+
+h2 {
   color: rgb(231, 216, 115);
 }
-h3{
+
+h3 {
   color: rgb(154, 231, 115);
 }
-h4{
+
+h4 {
   color: rgb(115, 171, 231);
 }
-h5{
+
+h5 {
   color: rgb(192, 115, 231);
 }
-h6{
+
+h6 {
   color: rgb(231, 115, 115);
 }
 
-#heading-h5{
+#heading-h5 {
   background-color: aqua;
 }
 
-.zoom{
+.zoom {
   font-size: 30px;
 }
 
-.center{
+.center {
   text-align: center;
 }
 
-.klein{
+.klein {
   box-shadow: 2px 2px black;
   background-color: bisque;
 }
 
-*{
+* {
   text-transform: uppercase;
 }
 
-p,span{
+p,
+span {
   text-decoration: underline;
 }
 
-a:hover{
+a:hover {
   color: red;
   cursor: pointer;
 }
@@ -51,34 +57,41 @@ ul li:last-child {
   color: green;
 }
 
-#rgb-color{
+#rgb-color {
   color: rgb(241, 6, 6);
   text-align: center;
 }
 
-#hex-color{
+#hex-color {
   color: #ed0d0d;
   text-align: center;
 }
 
-#rgba-color{
+#rgba-color {
   color: rgba(255, 0, 0, 1.0);
   text-align: center;
 }
 
-#color-name{
+#color-name {
   color: red;
   text-align: center;
 }
 
-.p-footer{
+.p-footer {
   text-align: center;
 }
 
-#paragraf-footer{
+#paragraf-footer {
   text-align: right;
 }
 
-footer p{
+footer p {
   text-align: left;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
