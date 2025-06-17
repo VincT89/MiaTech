@@ -1,0 +1,9 @@
+body {
+  height: 100vh;
+}
+
+#fluidDesign {
+  background-color: red;
+  width: 10%;
+  height: 20%;
+}
