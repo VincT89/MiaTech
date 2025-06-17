@@ -1,3 +1,12 @@
+
+:root {
+  --red-color: red;
+}
+
+*{
+  color: var(--red-color);
+}
+
 #fluidDesignContainer {
   width: 300px;
   height: 300px;
