@@ -229,16 +229,19 @@
 
 #container-float {
   width: 100%;
-  display: flex;
-  align-items: center;  
-  justify-content: space-evenly;
+  height: 300px;
   margin-top: 20px;
 }
 
-#container-float p {
+#paragrafo1 {
 float: left;
 }
 
 #container-float img {
   float: right;
+}
+
+#paragrafo2 {
+  clear: both;
+  color: black;
 }
