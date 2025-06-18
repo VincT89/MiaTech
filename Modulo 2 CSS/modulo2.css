@@ -90,3 +90,25 @@
   background-color: lightgreen;
   border: 1px solid black;
 }
+
+
+.inline{
+  display: inline;
+  background-color: lightcoral;
+  padding: 5px;
+  margin: 5px;
+}
+
+.inline-block {
+  display: inline-block;
+  background-color: lightseagreen;
+  padding: 5px;
+  margin: 5px;
+}
+
+.block {
+  display: block;
+  background-color: lightgoldenrodyellow;
+  padding: 5px;
+  margin: 5px;
+}
