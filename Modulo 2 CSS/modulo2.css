@@ -3,6 +3,10 @@
   --red-color: red;
 }
 
+:root {
+  --spacing: 50px;
+}
+
 *{
   color: var(--red-color);
 }
@@ -19,6 +23,7 @@
   background-color: red;
   width: 50%;
   height: 50%;
+  padding: var(--spacing);
 }
 
 #fixedDesignContainer {
