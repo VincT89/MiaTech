@@ -6,6 +6,10 @@
   --spacing: 50px;
 }
 
+body {
+  margin: 0;
+}
+
 * {
   color: var(--red-color);
 }
@@ -304,4 +308,18 @@ footer {
   gap: 20px;
   position: fixed;
   bottom: 0;
+}
+
+#containerAbsolute{
+  position: relative;
+}
+
+ #tornaSu {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+  z-index: 1000;
 }
