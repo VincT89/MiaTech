@@ -116,4 +116,25 @@
     flex-basis: 350px;
     align-self: flex-start;
   }
+
+    .container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 20px;
+    height: 400px; 
+    background-color: #f0f0f0; 
+  }
+  .container .box {
+    width: 200px;
+    height: 100px;
+    background-color: #4CAF50; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+  }
   
