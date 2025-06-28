@@ -178,4 +178,20 @@
     border-radius: 8px;
   }
 
+  .container-grid .box:nth-child(10){
+    height: 200px;
+  }
+  .container-grid .box:nth-child(9){
+    height: 200px;
+  }
+  .container-grid .box:nth-child(8){
+    height: 200px;
+  }
+  .container-grid .box:nth-child(7){
+    height: 200px;
+  }
+  .container-grid .box:nth-child(6){
+    height: 200px;
+  }
+
   
