@@ -93,7 +93,7 @@
   }
 
   .flexbox-grow-shrink-basis .box {
-    width: 500px;
+    width: 200px;
     height: 100px;
     background-color: #2196F3;
     border-radius: 8px;
@@ -105,5 +105,9 @@
   }
   .flexbox-grow-shrink-basis .box:nth-child(3) {
     flex-grow: 2; 
+  }
+  .flexbox-grow-shrink-basis .box:nth-child(1) {
+    flex-shrink: 2;
+    flex-basis: 100px;
   }
   
