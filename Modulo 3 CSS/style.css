@@ -109,9 +109,11 @@
   .flexbox-grow-shrink-basis .box:nth-child(1) {
     flex-shrink: 2;
     flex-basis: 100px;
+    align-self: flex-end;
   }
   .flexbox-grow-shrink-basis .box:nth-child(2) {
     flex-shrink: 1;
     flex-basis: 350px;
+    align-self: flex-start;
   }
   
