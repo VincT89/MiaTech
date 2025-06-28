@@ -80,3 +80,30 @@
     color: white; 
     font-size: 16px; 
   }
+
+  
+  .flexbox-grow-shrink-basis {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    height: 200px; 
+    background-color: #f0f0f0; 
+    gap: 20px; 
+  }
+
+  .flexbox-grow-shrink-basis .box {
+    width: 500px;
+    height: 100px;
+    background-color: #2196F3;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    font-size: 16px; 
+  }
+  .flexbox-grow-shrink-basis .box:nth-child(3) {
+    flex-grow: 2; 
+  }
+  
