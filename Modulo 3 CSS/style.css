@@ -36,3 +36,25 @@
     color: white; 
     font-size: 16px; 
   }
+
+  .flexbox-column-reverse {
+    display: flex; 
+    flex-direction: column-reverse; 
+    justify-content: center; 
+    align-items: center; 
+    height: 400px; 
+    background-color: #f0f0f0; 
+    gap: 20px; 
+  }
+
+  .flexbox-column-reverse .box {
+    width: 100px;
+    height: 100px;
+    background-color: #2196F3;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    font-size: 16px; 
+  }
