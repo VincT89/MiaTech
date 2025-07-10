@@ -1,17 +1,17 @@
-// Dichiarazione di variabili
+// DICHIARAZIONE VARIABILI
 let nome;
 const genere = "Maschile";
 nome = "Mario";
 // console.log(nome);
 // console.log(genere);
 
-// Cambio di valore
+// CAMBIO DI VALORE
 let num = 5;
 // console.log(num);
 num = 10;
 // console.log(num);
 
-// ridefinizione di variabili
+// RIDEFINIZIONE DI VARIABILI
 let number = 5;
 {
   let number = 10;
@@ -19,7 +19,7 @@ let number = 5;
 }
 // console.log(number); 
 
-// scoping variabili
+// SCOPING VARIABILI
 let outside = 12;
 {
   let inside = 15;
@@ -27,7 +27,7 @@ let outside = 12;
 }
 // console.log(outside, inside);
 
-// Genera numeri pari
+// GENERA NUMERI PARI
 
 for (let i = 0; i <= 20; i++) {
   if (i % 2 === 0) {
@@ -35,7 +35,7 @@ for (let i = 0; i <= 20; i++) {
   }
 }
 
-// Numeri dispari decrescenti
+//NUMERI DISPARI DECRESCENTI
 let n = 10;
 while (n >= 1) {
   if (n % 2 !== 0) {
@@ -44,18 +44,26 @@ while (n >= 1) {
   n--;
 }
 
-// Prompt
+// PROMPT
 // let word = prompt('Inserisci una parola');
 // console.log(word);
 
-// lunghezza della parola
+// LUNGHEZZA PAROLA PROMPT
 // ciaoc
 // console.log(lunghezzaParola);
 
-// richiesta di input corretto
-let parola;
-do {
-  parola = prompt("Inserisci una parola di almeno 5 caratteri:");
-} while (parola.length < 5);
+// RICHIESTA INPUT CORRETTO
+// let parola;
+// do {
+//   parola = prompt("Inserisci una parola di almeno 5 caratteri:");
+// } while (parola.length < 5);
 
-console.log(parola);
+// console.log(parola);
+
+// IF/ELSE
+let numero2 = 8;
+if (numero2 > 5) {
+  console.log("La variabile è maggione di 5");
+} else {
+  console.log('La variabile è minore di 5')
+}
