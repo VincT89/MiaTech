@@ -19,3 +19,11 @@ let number = 5;
 }
 console.log(number); 
 
+// scoping variabili
+let outside = 12;
+{
+  let inside = 15;
+  console.log(outside, inside);
+}
+
+  console.log(outside, inside);
