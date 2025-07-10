@@ -43,3 +43,8 @@ while (n >= 1) {
   }
   n--;
 }
+
+// Prompt
+let word = prompt('Inserisci una parola');
+console.log(word);
+
