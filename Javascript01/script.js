@@ -81,20 +81,24 @@ if (numero2 > 5) {
 // }
 
 // VERIFICA IL RISULTATO
-let score = parseInt(prompt('Inserisci il tuo punteggio:'));
-switch (true) {
-  case (score >= 90 && score <= 100):
-    console.log("Voto: Ottimo");
-    break;
-  case (score >= 70 && score <= 89):
-    console.log("Voto: Buono");
-    break;
-  case (score >= 60 && score <= 69):
-    console.log("Voto: Sufficiente");
-    break;
-  case (score <= 59):
-    console.log("Voto: Insufficiente");
-    break;
-  default:
-    console.log("Valore non valido")
-}
+// let score = parseInt(prompt('Inserisci il tuo punteggio:'));
+// switch (true) {
+//   case (score >= 90 && score <= 100):
+//     console.log("Voto: Ottimo");
+//     break;
+//   case (score >= 70 && score <= 89):
+//     console.log("Voto: Buono");
+//     break;
+//   case (score >= 60 && score <= 69):
+//     console.log("Voto: Sufficiente");
+//     break;
+//   case (score <= 59):
+//     console.log("Voto: Insufficiente");
+//     break;
+//   default:
+//     console.log("Valore non valido")
+// }
+
+// ARRAY NUMERI
+let arrNum = [1, 2, 3, 4, 5];
+console.log(arrNum);
