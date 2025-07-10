@@ -45,9 +45,17 @@ while (n >= 1) {
 }
 
 // Prompt
-let word = prompt('Inserisci una parola');
-console.log(word);
+// let word = prompt('Inserisci una parola');
+// console.log(word);
 
 // lunghezza della parola
-let lunghezzaParola = word.length;
-console.log(lunghezzaParola);
+// ciaoc
+// console.log(lunghezzaParola);
+
+// richiesta di input corretto
+let parola;
+do {
+  parola = prompt("Inserisci una parola di almeno 5 caratteri:");
+} while (parola.length < 5);
+
+console.log(parola);
