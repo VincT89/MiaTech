@@ -4,3 +4,10 @@ const genere = "Maschile";
 nome = "Mario";
 console.log(nome);
 console.log(genere);
+
+// Cambio di valore
+let num = 5;
+console.log(num);
+num = 10;
+console.log(num);
+
