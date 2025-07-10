@@ -34,3 +34,12 @@ for (let i = 0; i <= 20; i++) {
     console.log(i);
   }
 }
+
+// Numeri dispari decrescenti
+let n = 10;
+while (n >= 1) {
+  if (n % 2 !== 0) {
+    console.log(n);
+  }
+  n--;
+}
