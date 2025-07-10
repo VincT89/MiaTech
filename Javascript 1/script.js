@@ -2,28 +2,35 @@
 let nome;
 const genere = "Maschile";
 nome = "Mario";
-console.log(nome);
-console.log(genere);
+// console.log(nome);
+// console.log(genere);
 
 // Cambio di valore
 let num = 5;
-console.log(num);
+// console.log(num);
 num = 10;
-console.log(num);
+// console.log(num);
 
 // ridefinizione di variabili
 let number = 5;
 {
   let number = 10;
-  console.log(number); 
+  // console.log(number); 
 }
-console.log(number); 
+// console.log(number); 
 
 // scoping variabili
 let outside = 12;
 {
   let inside = 15;
-  console.log(outside, inside);
+  // console.log(outside, inside);
 }
+// console.log(outside, inside);
 
-  console.log(outside, inside);
+// Genera numeri pari
+
+for (let i = 0; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
