@@ -11,3 +11,11 @@ console.log(num);
 num = 10;
 console.log(num);
 
+// ridefinizione di variabili
+let number = 5;
+{
+  let number = 10;
+  console.log(number); 
+}
+console.log(number); 
+
