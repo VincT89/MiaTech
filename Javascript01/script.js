@@ -102,3 +102,11 @@ if (numero2 > 5) {
 // ARRAY NUMERI
 let arrNum = [1, 2, 3, 4, 5];
 console.log(arrNum);
+
+// SOMMA I NUMERI
+let sum = 0;
+for (let i = 0; i < arrNum.length; i++) {
+  sum = sum + arrNum[i];
+}
+
+console.log(sum);
