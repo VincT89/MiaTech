@@ -108,5 +108,11 @@ let sum = 0;
 for (let i = 0; i < arrNum.length; i++) {
   sum = sum + arrNum[i];
 }
-
 console.log(sum);
+
+// ARRAY REVERSE
+let invertito = [];
+for (let i = arrNum.length - 1; i >= 0; i--) {
+  invertito.push(arrNum[i])
+}
+console.log(invertito);
