@@ -48,3 +48,6 @@ while (n >= 1) {
 let word = prompt('Inserisci una parola');
 console.log(word);
 
+// lunghezza della parola
+let lunghezzaParola = word.length;
+console.log(lunghezzaParola);
