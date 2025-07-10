@@ -69,13 +69,32 @@ if (numero2 > 5) {
 }
 
 // IF/ELSE ELSEIF
+// let score = parseInt(prompt('Inserisci il tuo punteggio:'));
+// if (score >= 90 && score <= 100) {
+//   console.log("Voto: Ottimo")
+// } else if (score >= 70 && score <= 89) {
+//   console.log('Voto: Buono')
+// }else if (score >= 60 && score <= 69) {
+//   console.log('Voto: Sufficiente')
+// }else if (score <= 59) {
+//   console.log('Voto: Insufficiente')
+// }
+
+// VERIFICA IL RISULTATO
 let score = parseInt(prompt('Inserisci il tuo punteggio:'));
-if (score >= 90 && score <= 100) {
-  console.log("Voto: Ottimo")
-} else if (score >= 70 && score <= 89) {
-  console.log('Voto: Buono')
-}else if (score >= 60 && score <= 69) {
-  console.log('Voto: Sufficiente')
-}else if (score <= 59) {
-  console.log('Voto: Insufficiente')
+switch (true) {
+  case (score >= 90 && score <= 100):
+    console.log("Voto: Ottimo");
+    break;
+  case (score >= 70 && score <= 89):
+    console.log("Voto: Buono");
+    break;
+  case (score >= 60 && score <= 69):
+    console.log("Voto: Sufficiente");
+    break;
+  case (score <= 59):
+    console.log("Voto: Insufficiente");
+    break;
+  default:
+    console.log("Valore non valido")
 }
