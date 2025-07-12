@@ -274,3 +274,17 @@ let failedStudents = students.find((student) => {
   return student.grade < 60;
 })
 console.log ('Studenti bocciati:', failedStudents.name, failedStudents.grade)
+
+
+// REDUCE - SORT
+let expenses = [10.40, 12.50, 23.50, 53.60];
+
+let totale = expenses.reduce(function (somma, expense) {
+  return somma + expense;
+}, 0);
+console.log('Il totale della spesa è: ', totale);
+
+let words = ['banana', 'apple', 'cherry', 'date'];
+words.sort();
+
+console.log(words);
