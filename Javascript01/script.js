@@ -237,3 +237,16 @@ Object.entries(student).forEach(entry => {
 studentCompleto.forEach(e => {
   console.log(e);
 });
+
+// FOREACH - MAP
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(number => {
+  console.log(number * 2);
+})
+
+let squaredNumbers = numbers.map(number => {
+  return number * number;
+})
+
+console.log(squaredNumbers);
