@@ -170,3 +170,17 @@ function outerFunction(x) {
 let test = outerFunction(2);
 let risultato = test(3);
 console.log(risultato);
+
+// PERSISTENZA DELLE VARIABILI LOCALI
+function outerFunction2(x, initialValue) {
+  let result = initialValue;
+  function innerFunction2(y) {
+    result += y;
+    return result;
+  }
+  return innerFunction2;
+}
+
+let aggiorna = outerFunction2(5, 4);
+let persistenza = aggiorna(5);
+console.log(persistenza);
