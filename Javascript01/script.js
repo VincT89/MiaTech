@@ -227,3 +227,13 @@ Object.values(student).forEach(value => {
   studentValues.push(value)
 })
 console.log(studentValues);
+
+// OBJECT ENTRIES
+let studentCompleto = [];
+Object.entries(student).forEach(entry => {
+  studentCompleto.push(entry)
+})
+
+studentCompleto.forEach(e => {
+  console.log(e);
+});
