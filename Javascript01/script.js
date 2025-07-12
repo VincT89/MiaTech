@@ -141,3 +141,6 @@ let person = {
   city: 'Valenzano',
 }
 console.log(person);
+
+// ACCEDI ALLE PROPRIETA'
+console.log('Vincenzo ha' + ' ' + person.age + ' ' + 'anni');
