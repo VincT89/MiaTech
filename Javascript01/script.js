@@ -250,3 +250,27 @@ let squaredNumbers = numbers.map(number => {
 })
 
 console.log(squaredNumbers);
+
+// FILTER - FIND
+let students = [
+  { name: 'Luca', grade: 75 },
+  { name: 'Filippo', grade: 58 },
+  { name: 'Marco', grade: 82 },
+  { name: 'Gianluca', grade: 90 },
+  { name: 'Mario', grade: 45 },
+  { name: 'Vincenzo', grade: 72 },
+  { name: 'Antonio', grade: 78 },
+];
+
+let passedStudents = students.filter(function(student){
+  return student.grade >= 60;
+});
+console.log('Studenti promossi:');
+passedStudents.forEach(student => {
+  console.log(student.name, student.grade)
+})
+
+let failedStudents = students.find((student) => {
+  return student.grade < 60;
+})
+console.log ('Studenti bocciati:', failedStudents.name, failedStudents.grade)
