@@ -118,19 +118,26 @@ for (let i = arrNum.length - 1; i >= 0; i--) {
 console.log(invertito); 
 
 // POPOLAMENTO ARRAY
-let parole = [];
-for (let i = 0; i < 5; i++){
-  let parola;
-  do {
-    parola = prompt(`Inserisci la parola ${i + 1} di 5:`)
-  } while (!parola) {
-    parole.push(parola);
-  }
-}
+// let parole = [];
+// for (let i = 0; i < 5; i++){
+//   let parola;
+//   do {
+//     parola = prompt(`Inserisci la parola ${i + 1} di 5:`)
+//   } while (!parola) {
+//     parole.push(parola);
+//   }
+// }
 
-for (let i = 0; i < parole.length; i++){
-  if (parole[i].length % 2 !== 0) {
-   console.log(parole[i])
- }
-}
+// for (let i = 0; i < parole.length; i++){
+//   if (parole[i].length % 2 !== 0) {
+//    console.log(parole[i])
+//  }
+// }
 
+// CREA UN OGGETTO
+let person = {
+  name: 'Vincenzo',
+  age: 35,
+  city: 'Valenzano',
+}
+console.log(person);
