@@ -115,4 +115,22 @@ let invertito = [];
 for (let i = arrNum.length - 1; i >= 0; i--) {
   invertito.push(arrNum[i])
 }
-console.log(invertito);
+console.log(invertito); 
+
+// POPOLAMENTO ARRAY
+let parole = [];
+for (let i = 0; i < 5; i++){
+  let parola;
+  do {
+    parola = prompt(`Inserisci la parola ${i + 1} di 5:`)
+  } while (!parola) {
+    parole.push(parola);
+  }
+}
+
+for (let i = 0; i < parole.length; i++){
+  if (parole[i].length % 2 !== 0) {
+   console.log(parole[i])
+ }
+}
+
