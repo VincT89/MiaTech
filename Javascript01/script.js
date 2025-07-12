@@ -220,3 +220,10 @@ Object.keys(student).forEach(key => {
   studentArray.push(key)
 })
 console.log(studentArray);
+
+// OBJECT VALUES
+let studentValues = [];
+Object.values(student).forEach(value => {
+  studentValues.push(value)
+})
+console.log(studentValues);
