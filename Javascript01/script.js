@@ -14,34 +14,34 @@ num = 10;
 // RIDEFINIZIONE DI VARIABILI
 let number = 5;
 {
-  let number = 10;
-  // console.log(number); 
+	let number = 10;
+	// console.log(number);
 }
-// console.log(number); 
+// console.log(number);
 
 // SCOPING VARIABILI
 let outside = 12;
 {
-  let inside = 15;
-  // console.log(outside, inside);
+	let inside = 15;
+	// console.log(outside, inside);
 }
 // console.log(outside, inside);
 
 // GENERA NUMERI PARI
 
 for (let i = 0; i <= 20; i++) {
-  if (i % 2 === 0) {
-    console.log(i);
-  }
+	if (i % 2 === 0) {
+		console.log(i);
+	}
 }
 
 //NUMERI DISPARI DECRESCENTI
 let n = 10;
 while (n >= 1) {
-  if (n % 2 !== 0) {
-    console.log(n);
-  }
-  n--;
+	if (n % 2 !== 0) {
+		console.log(n);
+	}
+	n--;
 }
 
 // PROMPT
@@ -63,9 +63,9 @@ while (n >= 1) {
 // IF/ELSE
 let numero2 = 8;
 if (numero2 > 5) {
-  console.log("La variabile è maggione di 5");
+	console.log("La variabile è maggione di 5");
 } else {
-  console.log('La variabile è minore di 5')
+	console.log("La variabile è minore di 5");
 }
 
 // IF/ELSE ELSEIF
@@ -106,16 +106,16 @@ console.log(arrNum);
 // SOMMA I NUMERI
 let sum = 0;
 for (let i = 0; i < arrNum.length; i++) {
-  sum = sum + arrNum[i];
+	sum = sum + arrNum[i];
 }
 console.log(sum);
 
 // ARRAY REVERSE
 let invertito = [];
 for (let i = arrNum.length - 1; i >= 0; i--) {
-  invertito.push(arrNum[i])
+	invertito.push(arrNum[i]);
 }
-console.log(invertito); 
+console.log(invertito);
 
 // POPOLAMENTO ARRAY
 // let parole = [];
@@ -136,35 +136,35 @@ console.log(invertito);
 
 // CREA UN OGGETTO
 let person = {
-  name: 'Vincenzo',
-  age: 35,
-  city: 'Valenzano',
-}
+	name: "Vincenzo",
+	age: 35,
+	city: "Valenzano",
+};
 console.log(person);
 
 // ACCEDI ALLE PROPRIETA'
-console.log('Vincenzo ha' + ' ' + person.age + ' ' + 'anni');
+console.log("Vincenzo ha" + " " + person.age + " " + "anni");
 
 // MODIFICA LA PROPRIETA'
 person.age = 36;
-console.log('Vincenzo ha' + ' ' + person.age + ' ' + 'anni')
+console.log("Vincenzo ha" + " " + person.age + " " + "anni");
 
 // AGGIUNGI UNA NUOVA PROPRIETA'
-person.job = 'Geometra';
-console.log('Il lavoro di' + ' ' + person.name + ' ' + ' è il ' + person.job);
+person.job = "Geometra";
+console.log("Il lavoro di" + " " + person.name + " " + " è il " + person.job);
 console.log(person);
 
 // ITERAZIONE DELLE PROPRIETA'
 for (let key in person) {
-  console.log(key + ': ' + person[key]);
+	console.log(key + ": " + person[key]);
 }
 
 // FUNZIONI ANNIDATE
 function outerFunction(x) {
-  function innerFunction(y) {
-    return x + y;
-  }
-  return innerFunction;
+	function innerFunction(y) {
+		return x + y;
+	}
+	return innerFunction;
 }
 
 let test = outerFunction(2);
@@ -173,14 +173,37 @@ console.log(risultato);
 
 // PERSISTENZA DELLE VARIABILI LOCALI
 function outerFunction2(x, initialValue) {
-  let result = initialValue;
-  function innerFunction2(y) {
-    result += y;
-    return result;
-  }
-  return innerFunction2;
+	let result = initialValue;
+	function innerFunction2(y) {
+		result += y;
+		return result;
+	}
+	return innerFunction2;
 }
 
 let aggiorna = outerFunction2(5, 4);
 let persistenza = aggiorna(5);
 console.log(persistenza);
+
+// COUNTER
+function createCounter() {
+	let count = 0;
+
+	return {
+		increment: function () {
+			count++;
+			return count;
+		},
+
+		decrement: function () {
+			count--;
+			return count;
+		},
+	};
+}
+
+let counter = createCounter();
+console.log(counter.increment());
+console.log(counter.increment());
+console.log(counter.decrement());
+
