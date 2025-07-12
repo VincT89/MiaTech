@@ -148,3 +148,8 @@ console.log('Vincenzo ha' + ' ' + person.age + ' ' + 'anni');
 // MODIFICA LA PROPRIETA'
 person.age = 36;
 console.log('Vincenzo ha' + ' ' + person.age + ' ' + 'anni')
+
+// AGGIUNGI UNA NUOVA PROPRIETA'
+person.job = 'Geometra';
+console.log('Il lavoro di' + ' ' + person.name + ' ' + ' è il ' + person.job);
+console.log(person);
