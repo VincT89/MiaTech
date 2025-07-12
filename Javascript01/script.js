@@ -153,3 +153,8 @@ console.log('Vincenzo ha' + ' ' + person.age + ' ' + 'anni')
 person.job = 'Geometra';
 console.log('Il lavoro di' + ' ' + person.name + ' ' + ' è il ' + person.job);
 console.log(person);
+
+// ITERAZIONE DELLE PROPRIETA'
+for (let key in person) {
+  console.log(key + ': ' + person[key]);
+}
