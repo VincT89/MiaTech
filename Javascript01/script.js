@@ -144,3 +144,7 @@ console.log(person);
 
 // ACCEDI ALLE PROPRIETA'
 console.log('Vincenzo ha' + ' ' + person.age + ' ' + 'anni');
+
+// MODIFICA LA PROPRIETA'
+person.age = 36;
+console.log('Vincenzo ha' + ' ' + person.age + ' ' + 'anni')
