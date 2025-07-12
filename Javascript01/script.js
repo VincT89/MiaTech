@@ -158,3 +158,15 @@ console.log(person);
 for (let key in person) {
   console.log(key + ': ' + person[key]);
 }
+
+// FUNZIONI ANNIDATE
+function outerFunction(x) {
+  function innerFunction(y) {
+    return x + y;
+  }
+  return innerFunction;
+}
+
+let test = outerFunction(2);
+let risultato = test(3);
+console.log(risultato);
