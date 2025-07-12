@@ -207,3 +207,16 @@ console.log(counter.increment());
 console.log(counter.increment());
 console.log(counter.decrement());
 
+// OBJECT KEYS
+let student = {
+  name: 'Luca',
+  age: 18,
+  grade: '5°',
+  school: 'Liceo'
+}
+
+let studentArray = [];
+Object.keys(student).forEach(key => {
+  studentArray.push(key)
+})
+console.log(studentArray);
