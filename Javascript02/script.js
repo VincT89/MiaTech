@@ -13,7 +13,9 @@ class Automobile {
   }
 
   descrizione() {
-    return `Marca: ${this.marca}, Modello: ${this.modello}, Anno: ${this.anno}, Chilometraggio attuale: ${this.chilometraggio} km`;
+    const avviso = this._controllaChilometri();
+    return `Marca: ${this.marca}, Modello: ${this.modello}, Anno: ${this.anno}, Chilometraggio attuale: ${this.chilometraggio} km  ${avviso}`
+    
   }
  
   // AGGIUNGI METODI & PROPRIETA'
@@ -41,6 +43,15 @@ class Automobile {
     return `Età del veicolo: ${eta} anni`
   }
 
+  // METODO PROTETTO - AVVISO
+  _controllaChilometri() {
+    const soglia = 100000;
+    if (this.chilometraggio > soglia) {
+      return `Attenzione: chilometraggio elevato: ${this.chilometraggio} km`;
+    }
+    return `Acquistabile`;
+  }
+
 }
 
 let auto = new Automobile('VW', 'Golf', 2020, 120000);
@@ -60,7 +71,8 @@ class Elettrica extends Automobile {
   }
 
   descrizione() {
-    return `${super.descrizione()}, Autonomia batteria: ${this.autonomia} km`
+    const avviso = this._controllaChilometri();
+    return `${super.descrizione()}, Autonomia batteria: ${this.autonomia} km, ${avviso}`;
   }
 
   ricarica(km) {
@@ -72,7 +84,7 @@ class Elettrica extends Automobile {
   }
 }
 
-let autoElettrica = new Elettrica('Tesla', 'Model 3', 2022, 180000, 400)
+let autoElettrica = new Elettrica('Tesla', 'Model 3', 2022, 10000, 400)
 console.log(autoElettrica.descrizione());
 
 autoElettrica.ricarica(100);
@@ -84,10 +96,12 @@ Automobile.prototype.saluta = function () {
   return `Ciao! Sono una ${this.marca} ${this.modello}.`;
 };
 
-let auto2 = new Automobile('Fiat', 'Panda', 2015, 80000);
+let auto2 = new Automobile('Fiat', 'Panda', 2015, 180000);
 let autoElettrica2 = new Elettrica('Tesla', 'Model S', 2023, 10000, 500);
 
 console.log(auto2.saluta());
 console.log(autoElettrica2.saluta());
 console.log(auto2.mostraEtà());
 console.log(autoElettrica2.mostraEtà());
+console.log(auto2.descrizione());
+console.log(autoElettrica2.descrizione());
