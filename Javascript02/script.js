@@ -66,3 +66,14 @@ console.log(autoElettrica.descrizione());
 autoElettrica.ricarica(100);
 console.log(autoElettrica.descrizione());
 
+
+// SALUTA
+Automobile.prototype.saluta = function () {
+  return `Ciao! Sono una ${this.marca} ${this.modello}.`;
+};
+
+let auto2 = new Automobile('Fiat', 'Panda', 2015, 80000);
+let autoElettrica2 = new Elettrica('Tesla', 'Model S', 2023, 10000, 500);
+
+console.log(auto2.saluta());
+console.log(autoElettrica2.saluta());
