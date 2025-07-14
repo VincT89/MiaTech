@@ -29,6 +29,18 @@ class Automobile {
     return this.chilometraggio;
   }
 
+  // METODO PRIVATO - ETA'
+
+  #calcolaEtà() {
+    const annoCorrente = new Date().getFullYear();
+    return annoCorrente - this.anno;
+  }
+
+  mostraEtà() {
+    const eta = this.#calcolaEtà();
+    return `Età del veicolo: ${eta} anni`
+  }
+
 }
 
 let auto = new Automobile('VW', 'Golf', 2020, 120000);
@@ -60,7 +72,7 @@ class Elettrica extends Automobile {
   }
 }
 
-let autoElettrica = new Elettrica('Tesla', 'Model 3', 2022, 80000, 400)
+let autoElettrica = new Elettrica('Tesla', 'Model 3', 2022, 180000, 400)
 console.log(autoElettrica.descrizione());
 
 autoElettrica.ricarica(100);
@@ -77,3 +89,5 @@ let autoElettrica2 = new Elettrica('Tesla', 'Model S', 2023, 10000, 500);
 
 console.log(auto2.saluta());
 console.log(autoElettrica2.saluta());
+console.log(auto2.mostraEtà());
+console.log(autoElettrica2.mostraEtà());
