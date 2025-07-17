@@ -153,4 +153,36 @@ console.log(auto.mostraConteggioChiamate());
 auto.chilometraggio = 1120000;
 
 // CAMION
-class Camion extends Automobile {}
+class Camion extends Automobile {
+	caricoMassimo;
+	caricoAttuale = 0;
+
+	constructor(marca, modello, anno, chilometraggio, caricoMassimo) {
+		super(marca, modello, anno, chilometraggio);
+		this.caricoMassimo = caricoMassimo;
+	}
+
+	descrizione() {
+		return `${super.descrizione()}, Carico massimo: ${
+			this.caricoMassimo
+		} kg, Carico attuale: ${this.caricoAttuale} kg`;
+	}
+
+	carica(kg) {
+		if (kg > 0) {
+			if (this.caricoAttuale + kg < +this.caricoMassimo) {
+				this.caricoAttuale += kg;
+			} else {
+				console.error("Superato il carico massimo consentito.");
+			}
+    } else {
+      console.error("Inserisci un valore positivo per il carico.")
+    }
+	}
+}
+
+let camion = new Camion('Iveco', 'Stralis', 2020, 150000, 12000);
+
+camion.carica(4000);
+console.log(camion.descrizione());
+camion.carica(13000);
