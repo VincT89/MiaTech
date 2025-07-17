@@ -82,6 +82,15 @@ class Automobile {
   get chilometraggio() {
     return this._chilometraggio;
   }
+
+  // SETTER
+  set chilometraggio(km) {
+    if (km >= this._chilometraggio) {
+      this._chilometraggio = km;
+    } else {
+      console.error('Il chilometraggio non può diminuire.')
+    }
+  }
 }
 
 let auto = new Automobile("VW", "Golf", 2020, 120000);
@@ -140,3 +149,5 @@ let confronto = Automobile.confrontaChilometraggio(auto, autoElettrica);
 console.log(confronto);
 
 console.log(auto.mostraConteggioChiamate());
+
+auto.chilometraggio = 1120000;
