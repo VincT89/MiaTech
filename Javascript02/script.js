@@ -90,7 +90,16 @@ class Automobile {
 		} else {
 			console.error("Il chilometraggio non può diminuire.");
 		}
-	}
+  }
+  
+  // METODO STATICO - VERIFICA ISTANZA
+  static verificaIstanza(obj, classe) {
+    if (obj instanceof classe) {
+      return `L'oggetto è un' istanza di ${classe.name}`;
+    } else {
+      return `L'oggetto NON è un' istanza di ${classe.name}`
+    }
+  }
 }
 
 let auto = new Automobile("VW", "Golf", 2020, 120000);
@@ -186,3 +195,16 @@ let camion = new Camion('Iveco', 'Stralis', 2020, 150000, 12000);
 camion.carica(4000);
 console.log(camion.descrizione());
 camion.carica(13000);
+
+let FiatPunto = new Automobile('Fiat', 'Punto', 2010, 90000);
+let VolvoCamion = new Camion('Volvo', 'FH16', 2018, 180000, 20000);
+
+console.log(FiatPunto instanceof Automobile);
+console.log(FiatPunto instanceof Camion);
+console.log(VolvoCamion instanceof Automobile);
+console.log(VolvoCamion instanceof Camion);
+
+console.log(Automobile.verificaIstanza(FiatPunto, Automobile));
+console.log(Automobile.verificaIstanza(FiatPunto, Camion));
+console.log(Automobile.verificaIstanza(VolvoCamion, Automobile));
+console.log(Automobile.verificaIstanza(VolvoCamion, Camion));
