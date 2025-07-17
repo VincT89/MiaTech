@@ -15,8 +15,8 @@ class Automobile {
 
   descrizione() {
     const avviso = this._controllaChilometri();
-    return `Marca: ${this.marca}, Modello: ${this.modello}, Anno: ${this.anno}, Chilometraggio attuale: ${this.chilometraggio} km  ${avviso}`
-    
+    this.#incrementaContatore();
+    return `Marca: ${this.marca}, Modello: ${this.modello}, Anno: ${this.anno}, Chilometraggio attuale: ${this.chilometraggio} km  ${avviso}, Chiamate ricevute: ${this.#contatoreChiamate}`
   }
  
   // AGGIUNGI METODI & PROPRIETA'
@@ -62,6 +62,11 @@ class Automobile {
     } else {
       return `Entrambe le auto hanno lo stesso chilometraggio (${auto1.chilometraggio} km)`
     }
+  }
+
+  // METODO PRIVATO - INCREMENTA CONTATORE
+  #incrementaContatore() {
+     this.#contatoreChiamate++;
   }
 
 }
