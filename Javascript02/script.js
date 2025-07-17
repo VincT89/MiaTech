@@ -52,6 +52,17 @@ class Automobile {
     return `Acquistabile`;
   }
 
+  // METODO STATICO - CONFRONTO CHILOMETRAGGIO
+  static confrontaChilometraggio(auto1, auto2) {
+    if (auto1.chilometraggio > auto2.chilometraggio) {
+      return `${auto1.marca} ${auto1.modello} ha un chilometraggio maggiore (${auto1.chilometraggio} km)`;
+    } else if (auto2.chilometraggio > auto1.chilometraggio) {
+      return `${auto2.marca} ${auto2.modello} ha un chilometraggio maggiore (${auto2.chilometraggio} km)`;
+    } else {
+      return `Entrambe le auto hanno lo stesso chilometraggio (${auto1.chilometraggio} km)`
+    }
+  }
+
 }
 
 let auto = new Automobile('VW', 'Golf', 2020, 120000);
@@ -84,7 +95,7 @@ class Elettrica extends Automobile {
   }
 }
 
-let autoElettrica = new Elettrica('Tesla', 'Model 3', 2022, 10000, 400)
+let autoElettrica = new Elettrica('Tesla', 'Model 3', 2022, 1000000, 400)
 console.log(autoElettrica.descrizione());
 
 autoElettrica.ricarica(100);
@@ -105,3 +116,7 @@ console.log(auto2.mostraEtà());
 console.log(autoElettrica2.mostraEtà());
 console.log(auto2.descrizione());
 console.log(autoElettrica2.descrizione());
+
+let confronto = Automobile.confrontaChilometraggio(auto, autoElettrica);
+console.log(confronto);
+
