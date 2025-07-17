@@ -15,11 +15,7 @@ class Automobile {
 
 	descrizione() {
 		const avviso = this._controllaChilometri();
-		return `Marca: ${this.marca}, Modello: ${this.modello}, Anno: ${
-			this.anno
-		}, Chilometraggio attuale: ${
-			this.chilometraggio
-		} km  ${avviso}`;
+		return `Marca: ${this.marca}, Modello: ${this.modello}, Anno: ${this.anno}, Chilometraggio attuale: ${this.chilometraggio} km  ${avviso}`;
 	}
 
 	// AGGIUNGI METODI & PROPRIETA'
@@ -70,14 +66,18 @@ class Automobile {
 	// METODO PRIVATO - INCREMENTA CONTATORE
 	#incrementaContatore() {
 		this.#contatoreChiamate++;
-  }
-  
-  // METODO PUBBLICO - AGGIUNGI CHILOMETRI
-  aggiungiChilometri(km) {
-    this.#incrementaContatore();
-    }
-  }
+	}
 
+	// METODO PUBBLICO - AGGIUNGI CHILOMETRI
+	aggiungiChilometri(km) {
+		this.#incrementaContatore();
+	}
+
+	// METODO PUBBLICO -  MOSTRA CONTEGGIO
+	mostraConteggioChiamate() {
+		return `Hai ricevuto ${this.#contatoreChiamate} chiamata.`;
+	}
+}
 
 let auto = new Automobile("VW", "Golf", 2020, 120000);
 console.log(auto);
