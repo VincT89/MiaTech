@@ -3,32 +3,32 @@ class Automobile {
 	marca;
 	modello;
 	anno;
-	chilometraggio = 0;
+	_chilometraggio = 0;
 	#contatoreChiamate = 0;
 
 	constructor(marca, modello, anno, chilometraggio) {
 		this.marca = marca;
 		this.modello = modello;
 		this.anno = anno;
-		this.chilometraggio = chilometraggio;
+		this._chilometraggio = chilometraggio;
 	}
 
 	descrizione() {
 		const avviso = this._controllaChilometri();
-		return `Marca: ${this.marca}, Modello: ${this.modello}, Anno: ${this.anno}, Chilometraggio attuale: ${this.chilometraggio} km  ${avviso}`;
+		return `Marca: ${this.marca}, Modello: ${this.modello}, Anno: ${this.anno}, Chilometraggio attuale: ${this._chilometraggio} km  ${avviso}`;
 	}
 
 	// AGGIUNGI METODI & PROPRIETA'
 	aggiungiChilometri(km) {
 		if (km > 0) {
-			this.chilometraggio += km;
+			this._chilometraggio += km;
 		} else {
 			console.error("Inserisci un valore positivo.");
 		}
 	}
 
 	mostraChilometraggio() {
-		return this.chilometraggio;
+		return this._chilometraggio;
 	}
 
 	// METODO PRIVATO - ETA'
@@ -46,8 +46,8 @@ class Automobile {
 	// METODO PROTETTO - AVVISO
 	_controllaChilometri() {
 		const soglia = 100000;
-		if (this.chilometraggio > soglia) {
-			return `Attenzione: chilometraggio elevato: ${this.chilometraggio} km`;
+		if (this._chilometraggio > soglia) {
+			return `Attenzione: chilometraggio elevato: ${this._chilometraggio} km`;
 		}
 		return `Acquistabile`;
 	}
@@ -55,11 +55,11 @@ class Automobile {
 	// METODO STATICO - CONFRONTO CHILOMETRAGGIO
 	static confrontaChilometraggio(auto1, auto2) {
 		if (auto1.chilometraggio > auto2.chilometraggio) {
-			return `${auto1.marca} ${auto1.modello} ha un chilometraggio maggiore (${auto1.chilometraggio} km)`;
-		} else if (auto2.chilometraggio > auto1.chilometraggio) {
-			return `${auto2.marca} ${auto2.modello} ha un chilometraggio maggiore (${auto2.chilometraggio} km)`;
+			return `${auto1.marca} ${auto1.modello} ha un chilometraggio maggiore (${auto1._chilometraggio} km)`;
+		} else if (auto2._chilometraggio > auto1._chilometraggio) {
+			return `${auto2.marca} ${auto2.modello} ha un chilometraggio maggiore (${auto2._chilometraggio} km)`;
 		} else {
-			return `Entrambe le auto hanno lo stesso chilometraggio (${auto1.chilometraggio} km)`;
+			return `Entrambe le auto hanno lo stesso chilometraggio (${auto1._chilometraggio} km)`;
 		}
 	}
 
@@ -76,7 +76,12 @@ class Automobile {
 	// METODO PUBBLICO -  MOSTRA CONTEGGIO
 	mostraConteggioChiamate() {
 		return `Hai ricevuto ${this.#contatoreChiamate} chiamata.`;
-	}
+  }
+  
+  // GETTER
+  get chilometraggio() {
+    return this._chilometraggio;
+  }
 }
 
 let auto = new Automobile("VW", "Golf", 2020, 120000);
