@@ -76,21 +76,21 @@ class Automobile {
 	// METODO PUBBLICO -  MOSTRA CONTEGGIO
 	mostraConteggioChiamate() {
 		return `Hai ricevuto ${this.#contatoreChiamate} chiamata.`;
-  }
-  
-  // GETTER
-  get chilometraggio() {
-    return this._chilometraggio;
-  }
+	}
 
-  // SETTER
-  set chilometraggio(km) {
-    if (km >= this._chilometraggio) {
-      this._chilometraggio = km;
-    } else {
-      console.error('Il chilometraggio non può diminuire.')
-    }
-  }
+	// GETTER
+	get chilometraggio() {
+		return this._chilometraggio;
+	}
+
+	// SETTER
+	set chilometraggio(km) {
+		if (km >= this._chilometraggio) {
+			this._chilometraggio = km;
+		} else {
+			console.error("Il chilometraggio non può diminuire.");
+		}
+	}
 }
 
 let auto = new Automobile("VW", "Golf", 2020, 120000);
@@ -151,3 +151,6 @@ console.log(confronto);
 console.log(auto.mostraConteggioChiamate());
 
 auto.chilometraggio = 1120000;
+
+// CAMION
+class Camion extends Automobile {}
