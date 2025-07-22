@@ -12,3 +12,14 @@ console.log(primoNum, terzoNum);
 let nume = [1, 2];
 let [a = 0, b = 0, c = 0, d = 0, e = 0] = nume;
 console.log(a, b, c, d, e);
+
+// ESTRAZIONE DI PROPRIETA' BASE
+let persona = {
+  nome: 'Luca',
+  eta: 36,
+  professione: 'Sviluppatore'
+};
+let { nome, eta, professione } = persona;
+console.log('Nome:', nome);
+console.log('Età:', eta);
+console.log('Professione:', professione);
