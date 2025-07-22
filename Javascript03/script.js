@@ -60,3 +60,17 @@ let array1 = [1, 2, 3];
 let array2 = [4, 5, 6];
 let arrayUnito = [...array1, ...array2];
 console.log(arrayUnito);
+
+// COPIA DI UN OGGETTO CON PROPRIETA' AGGIUNTIVE
+let user = {
+  nome: 'Vincenzo',
+  cognome: 'Tito'
+};
+
+let userCopia = {
+  ...user,
+  mansione: 'Operaio'
+}
+
+console.log('Originale: ', user);
+console.log('Copia: ', userCopia);
