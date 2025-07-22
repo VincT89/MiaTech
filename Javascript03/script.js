@@ -181,3 +181,18 @@ if (stato === "errore") {
 } else {
   console.log("Operazione effettuata con successo.")
 }
+
+// UTILIZZARE CONSOLE.TABLE E CONSOLE.GROUP
+let libri = [
+  { titolo: "Il Signore degli Anelli", autore: "J.R.R.Tolkien" },
+  { titolo: "Il Trono di Spade", autore: "George Martin" },
+  { titolo: "Harry Potter e i doni della morte", autore: "J.K Rowling" }
+];
+
+console.table(libri);
+
+console.group("Log Libreria");
+console.log("Inizio caricamento catalogo...");
+console.log(`Libri trovati: ${libri.length}`);
+console.log("Catalogo visualizzato correttamente.");
+console.groupEnd();
