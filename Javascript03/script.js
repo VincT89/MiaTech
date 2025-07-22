@@ -74,3 +74,12 @@ let userCopia = {
 
 console.log('Originale: ', user);
 console.log('Copia: ', userCopia);
+
+// FUNZIONE CON PARAMETRI VARIABILI
+function somma(...numeri) {
+  return numeri.reduce((totale, corrente) => totale + corrente, 0);
+}
+
+console.log('Somma 1:', somma(1, 2));
+console.log('Somma 2:', somma(5, 10, 15));
+console.log('Somma 3:', somma()); 
