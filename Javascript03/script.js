@@ -170,3 +170,14 @@ console.log(number1);
 console.log(string);
 console.log(arr);
 console.log(obj);
+
+// UTILIZZARE CONSOLE.ERROR E CONSOLE.WARM
+let stato = "errore";
+
+if (stato === "errore") {
+  console.error("Operazione non effettuata.");
+} else if (stato === "attenzione") {
+  console.warn("Attenzione: prima di proseguire, ricontrolla i dati inseriti.")
+} else {
+  console.log("Operazione effettuata con successo.")
+}
