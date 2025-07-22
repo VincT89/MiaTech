@@ -29,3 +29,21 @@ let { nome: nomePersona, eta: anni, professione: lavoro } = persona;
 console.log('Nome:', nomePersona);
 console.log('Anni:', anni);
 console.log('Professione:', lavoro);
+
+// DESTRUCTURING CON VALORI PREDEFINITI
+let persona2 = {
+  nome: 'Giulia',
+  città: 'Roma'
+};
+
+let {
+  nome: nome2,
+  eta: eta2 = 30, 
+  città: città2,
+  professione: professione2 = 'Disoccupato'
+} = persona2;
+
+console.log('Nome:', nome2);
+console.log('Età:', eta2);
+console.log('Città:', città2);
+console.log('Professione:', professione2);
