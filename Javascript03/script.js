@@ -108,3 +108,9 @@ let studente = {
 
 let conversioneJSON = JSON.stringify(studente);
 console.log(conversioneJSON);
+
+// CONVERSIONE DI UNA STRINGA JSON IN UN OGGETTO
+let jsonString = '{"marca":"Toyota","modello":"Yaris","anno":2021,"elettrica":false}';
+
+let auto = JSON.parse(jsonString);
+console.log(auto);
