@@ -23,3 +23,9 @@ let { nome, eta, professione } = persona;
 console.log('Nome:', nome);
 console.log('Età:', eta);
 console.log('Professione:', professione);
+
+// DESTRUCTURING CON NOME DI VARIABILI DIVERSI
+let { nome: nomePersona, eta: anni, professione: lavoro } = persona;
+console.log('Nome:', nomePersona);
+console.log('Anni:', anni);
+console.log('Professione:', lavoro);
