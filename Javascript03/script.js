@@ -156,3 +156,17 @@ let personaEsempio =  {
 }
 
 console.log(formattaPersona(personaEsempio));
+
+// UTILIZZARE CONSOLE.LOG
+let number1 = 2;
+let string = "Hello World";
+let arr = [1, 2, 3, 4, 5, 6];
+let obj = {
+  id: 1,
+  nomeProdotto: "Air Jordan 1"
+}
+
+console.log(number1);
+console.log(string);
+console.log(arr);
+console.log(obj);
