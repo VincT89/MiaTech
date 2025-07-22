@@ -127,3 +127,10 @@ arrayPersone.push({ "nome": "Vincenzo", "genere": "Maschile" });
 
 let arrayAggiornato = JSON.stringify(arrayPersone);
 console.log(arrayAggiornato);
+
+// STRINGA SEMPLICE CON TEMPLATE LITERALS
+let firstName = "Vincenzo";
+let surname = "Tito";
+
+let fullName = `${firstName} ${surname}`;
+console.log(fullName);
