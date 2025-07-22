@@ -134,3 +134,11 @@ let surname = "Tito";
 
 let fullName = `${firstName} ${surname}`;
 console.log(fullName);
+
+// STRINGA MULTILINEA CON TEMPLATE LITERALS
+let nome1 = "Luca";
+let cognome1 = "Bianchi";
+let eta1 = 35;
+let citta1 = "Roma";
+
+let infoPersona = `Nome: ${nome1} - Cognome: ${cognome1} - età: ${eta1} - Città: ${citta1}`;
