@@ -88,3 +88,13 @@ console.log('Somma 3:', somma());
 let number = [19, 6, 1989, 11, 2, 1993]
 let [first, second, ...rest] = number;
 console.log(first, second, rest);
+
+// DESTRUCTURING OGGETTO CON REST OPERATOR
+let prodotto = {
+  id: 10,
+  nomeProdotto: 'PlayStation',
+  prezzo: 200.00,
+  disponibilita: false
+};
+let { id, nomeProdotto, ...altro } = prodotto;
+console.log(id, nomeProdotto, altro);
