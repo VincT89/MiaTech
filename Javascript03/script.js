@@ -54,3 +54,9 @@ let copiaNumArray = [...numArray];
 numArray.push(60);
 console.log(numArray);
 console.log(copiaNumArray);
+
+// UNIONE DI DUE ARRAY
+let array1 = [1, 2, 3];
+let array2 = [4, 5, 6];
+let arrayUnito = [...array1, ...array2];
+console.log(arrayUnito);
