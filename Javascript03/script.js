@@ -47,3 +47,10 @@ console.log('Nome:', nome2);
 console.log('Età:', eta2);
 console.log('Città:', città2);
 console.log('Professione:', professione2);
+
+// COPIA DI UN ARRAY
+let numArray = [10, 20, 30, 40, 50];
+let copiaNumArray = [...numArray];
+numArray.push(60);
+console.log(numArray);
+console.log(copiaNumArray);
