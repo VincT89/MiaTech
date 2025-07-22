@@ -98,3 +98,13 @@ let prodotto = {
 };
 let { id, nomeProdotto, ...altro } = prodotto;
 console.log(id, nomeProdotto, altro);
+
+// CONVERSIONE DI UN OGGETTO IN UNA STRINGA JSON
+let studente = {
+  nome: 'Luca',
+  voto: 30,
+  materia: 'Chimica applicata'
+}
+
+let conversioneJSON = JSON.stringify(studente);
+console.log(conversioneJSON);
