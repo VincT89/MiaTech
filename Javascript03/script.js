@@ -83,3 +83,8 @@ function somma(...numeri) {
 console.log('Somma 1:', somma(1, 2));
 console.log('Somma 2:', somma(5, 10, 15));
 console.log('Somma 3:', somma()); 
+
+// DESTRUCTURING ARRAY CON REST OPERATOR
+let number = [19, 6, 1989, 11, 2, 1993]
+let [first, second, ...rest] = number;
+console.log(first, second, rest);
