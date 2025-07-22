@@ -114,3 +114,16 @@ let jsonString = '{"marca":"Toyota","modello":"Yaris","anno":2021,"elettrica":fa
 
 let auto = JSON.parse(jsonString);
 console.log(auto);
+
+
+//MANIPOLAZIONE DI DATI JSON
+let arrayPersoneJSON = [
+  { "nome": "Marco", "genere": "Maschile" },
+  { "nome": "Laura", "genere": "Femminile" },
+  { "nome": "Giovanni", "genere": "Maschile" },
+];
+let arrayPersone = JSON.parse(arrayPersoneJSON);
+arrayPersone.push({ "nome": "Vincenzo", "genere": "Maschile" });
+
+let arrayAggiornato = JSON.stringify(arrayPersone);
+console.log(arrayAggiornato);
