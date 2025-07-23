@@ -242,11 +242,23 @@ try {
 try {
 	let parola = null;
 	if (typeof parola !== "string") {
-		console.log("Attenzione la variabile non è una string!!!");
+		console.log("Attenzione la variabile non è una stringa!!!");
 	} else {
 		let generico = generico + parola;
 		console.log(generico);
 	}
 } catch (e) {
 	console.log("Errore generico : ", e.message);
+}
+
+
+// USO DI FINALLY PER ESEGUIRE CODICE INDIPENDENTEMENTE DAL RISULTATO
+try {
+	let testo = null;
+	let testoGrande = testo.toUpperCase();
+	console.log(testoGrande);
+} catch (e) {
+	console.log("Si è verificato un errore: ", e.message);
+} finally {
+	console.log("Operazione completata.");
 }
