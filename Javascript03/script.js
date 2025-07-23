@@ -148,12 +148,12 @@ function formattaPersona(obj) {
 	return `Nome: ${obj.n} - Cognome: ${obj.cog} - età: ${obj.e} - Città: ${obj.cit}`;
 }
 
-let personaEsempio =  {
-  n: "Carlo",
-  cog: "Verdi",
-  e: 32,
-  cit: "Milano"
-}
+let personaEsempio = {
+	n: "Carlo",
+	cog: "Verdi",
+	e: 32,
+	cit: "Milano",
+};
 
 console.log(formattaPersona(personaEsempio));
 
@@ -162,9 +162,9 @@ let number1 = 2;
 let string = "Hello World";
 let arr = [1, 2, 3, 4, 5, 6];
 let obj = {
-  id: 1,
-  nomeProdotto: "Air Jordan 1"
-}
+	id: 1,
+	nomeProdotto: "Air Jordan 1",
+};
 
 console.log(number1);
 console.log(string);
@@ -175,18 +175,18 @@ console.log(obj);
 let stato = "errore";
 
 if (stato === "errore") {
-  console.error("Operazione non effettuata.");
+	console.error("Operazione non effettuata.");
 } else if (stato === "attenzione") {
-  console.warn("Attenzione: prima di proseguire, ricontrolla i dati inseriti.")
+	console.warn("Attenzione: prima di proseguire, ricontrolla i dati inseriti.");
 } else {
-  console.log("Operazione effettuata con successo.")
+	console.log("Operazione effettuata con successo.");
 }
 
 // UTILIZZARE CONSOLE.TABLE E CONSOLE.GROUP
 let libri = [
-  { titolo: "Il Signore degli Anelli", autore: "J.R.R.Tolkien" },
-  { titolo: "Il Trono di Spade", autore: "George Martin" },
-  { titolo: "Harry Potter e i doni della morte", autore: "J.K Rowling" }
+	{ titolo: "Il Signore degli Anelli", autore: "J.R.R.Tolkien" },
+	{ titolo: "Il Trono di Spade", autore: "George Martin" },
+	{ titolo: "Harry Potter e i doni della morte", autore: "J.K Rowling" },
 ];
 
 console.table(libri);
@@ -200,21 +200,21 @@ console.groupEnd();
 // UTILIZZARE SET-TIMEOUT
 function dopo3Secondi() {
 	console.log("Questo messaggio apparirà ogni 3 secondi!");
-};
+}
 
 setTimeout(dopo3Secondi, 3000);
 
 // UTILIZZARE SET-INTERVAL
 function stampaMessaggio() {
 	console.log("Questo messaggio invece apparirà ogni 2 secondi!");
-};
+}
 
 setInterval(stampaMessaggio, 2000);
 
 // INTERROMPERE SET-INTERVAL CON CLEAR-INTERVAL
 function stampaSecondi() {
 	console.log("1 secondo passato");
-};
+}
 
 let intervalloStampa = setInterval(stampaSecondi, 1000);
 
@@ -222,3 +222,18 @@ setTimeout(() => {
 	clearInterval(intervalloStampa);
 	console.log("Stop dopo 5 secondi");
 }, 5000);
+
+// GESTIONE DI UN ERRORE SEMPLICE
+try {
+	let dividendo = 10;
+	let divisore = 0;
+
+	if (divisore === 0) {
+		console.error("Attenzione divisione non permessa!!")
+	} else {
+		let divisione = dividendo / divisore;
+		console.log(divisione);
+	}
+} catch (e) {
+	console.error(e);
+}
