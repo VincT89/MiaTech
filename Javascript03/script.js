@@ -202,26 +202,26 @@ function dopo3Secondi() {
 	console.log("Questo messaggio apparirà ogni 3 secondi!");
 }
 
-setTimeout(dopo3Secondi, 3000);
+// setTimeout(dopo3Secondi, 3000);
 
 // UTILIZZARE SET-INTERVAL
 function stampaMessaggio() {
 	console.log("Questo messaggio invece apparirà ogni 2 secondi!");
 }
 
-setInterval(stampaMessaggio, 2000);
+// setInterval(stampaMessaggio, 2000);
 
 // INTERROMPERE SET-INTERVAL CON CLEAR-INTERVAL
 function stampaSecondi() {
 	console.log("1 secondo passato");
 }
 
-let intervalloStampa = setInterval(stampaSecondi, 1000);
+// let intervalloStampa = setInterval(stampaSecondi, 1000);
 
-setTimeout(() => {
-	clearInterval(intervalloStampa);
-	console.log("Stop dopo 5 secondi");
-}, 5000);
+// setTimeout(() => {
+// 	clearInterval(intervalloStampa);
+// 	console.log("Stop dopo 5 secondi");
+// }, 5000);
 
 // GESTIONE DI UN ERRORE SEMPLICE
 try {
@@ -229,11 +229,24 @@ try {
 	let divisore = 0;
 
 	if (divisore === 0) {
-		console.error("Attenzione divisione non permessa!!")
+		console.error("Attenzione divisione non permessa!!");
 	} else {
 		let divisione = dividendo / divisore;
 		console.log(divisione);
 	}
 } catch (e) {
 	console.error(e);
+}
+
+// GESTIONE DI PIU' TIPI DI ERRORI
+try {
+	let parola = null;
+	if (typeof parola !== "string") {
+		console.log("Attenzione la variabile non è una string!!!");
+	} else {
+		let generico = generico + parola;
+		console.log(generico);
+	}
+} catch (e) {
+	console.log("Errore generico : ", e.message);
 }
