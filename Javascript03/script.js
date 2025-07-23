@@ -117,11 +117,11 @@ let auto = JSON.parse(jsonString);
 console.log(auto);
 
 //MANIPOLAZIONE DI DATI JSON
-let arrayPersoneJSON = [
+let arrayPersoneJSON = JSON.stringify([
 	{ nome: "Marco", genere: "Maschile" },
 	{ nome: "Laura", genere: "Femminile" },
 	{ nome: "Giovanni", genere: "Maschile" },
-];
+]);
 let arrayPersone = JSON.parse(arrayPersoneJSON);
 arrayPersone.push({ nome: "Vincenzo", genere: "Maschile" });
 
@@ -145,7 +145,7 @@ let infoPersona = `Nome: ${nome1} - Cognome: ${cognome1} - età: ${eta1} - Citt�
 
 // FUNZIONE E TEMPLATE LITERALS
 function formattaPersona(obj) {
-	return `Nome: ${n.obj} - Cognome: ${cog.obj} - età: ${e.obj} - Città: ${cit.obj}`;
+	return `Nome: ${obj.n} - Cognome: ${obj.cog} - età: ${obj.e} - Città: ${obj.cit}`;
 }
 
 let personaEsempio =  {
@@ -196,3 +196,10 @@ console.log("Inizio caricamento catalogo...");
 console.log(`Libri trovati: ${libri.length}`);
 console.log("Catalogo visualizzato correttamente.");
 console.groupEnd();
+
+// UTILIZZARE SET-TIMEOUT
+function dopo3Secondi() {
+	console.log("Questo messaggio apparirà ogni 3 secondi!");
+}
+
+setTimeout(dopo3Secondi, 3000);
