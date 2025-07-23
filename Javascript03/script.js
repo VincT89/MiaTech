@@ -200,6 +200,13 @@ console.groupEnd();
 // UTILIZZARE SET-TIMEOUT
 function dopo3Secondi() {
 	console.log("Questo messaggio apparirà ogni 3 secondi!");
-}
+};
 
 setTimeout(dopo3Secondi, 3000);
+
+// UTILIZZARE SET-INTERVAL
+function stampaMessaggio() {
+	console.log("Questo messaggio invece apparirà ogni 2 secondi!");
+};
+
+setInterval(stampaMessaggio, 2000);
