@@ -210,3 +210,15 @@ function stampaMessaggio() {
 };
 
 setInterval(stampaMessaggio, 2000);
+
+// INTERROMPERE SET-INTERVAL CON CLEAR-INTERVAL
+function stampaSecondi() {
+	console.log("1 secondo passato");
+};
+
+let intervalloStampa = setInterval(stampaSecondi, 1000);
+
+setTimeout(() => {
+	clearInterval(intervalloStampa);
+	console.log("Stop dopo 5 secondi");
+}, 5000);
