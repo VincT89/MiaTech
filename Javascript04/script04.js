@@ -338,77 +338,95 @@ function operazione(booleano) {
 }
 
 async function eseguiOperazione(valido) {
-  try {
-    let risultato = await operazione(valido);
-    console.log(risultato);
-  } catch (errore) {
-    console.log(errore);
-  }
+	try {
+		let risultato = await operazione(valido);
+		console.log(risultato);
+	} catch (errore) {
+		console.log(errore);
+	}
 }
 
 eseguiOperazione(false);
 
-
 // FUNZIONI ASINCRONE IN SERIE
 async function primaOperazione() {
-  return new Promise(function (resolve) {
-    setTimeout(function () {
-      resolve("Prima completata");
-    }, 2000);
-  });
+	return new Promise(function (resolve) {
+		setTimeout(function () {
+			resolve("Prima completata");
+		}, 2000);
+	});
 }
 async function secondaOperazione() {
-  return new Promise(function (resolve) {
-    setTimeout(function () {
-      resolve("Seconda completata");
-    }, 3000);
-  });
+	return new Promise(function (resolve) {
+		setTimeout(function () {
+			resolve("Seconda completata");
+		}, 3000);
+	});
 }
 async function esecutore() {
-  const risultato1 = await primaOperazione();
-  console.log(risultato1);
+	const risultato1 = await primaOperazione();
+	console.log(risultato1);
 
-  const risultato2 = await secondaOperazione();
-  console.log(risultato2);
+	const risultato2 = await secondaOperazione();
+	console.log(risultato2);
 }
 
 esecutore();
 
 // ESEGUIRE UNA RICHIESTA GET SEMPLICE
 async function prendiDati() {
-  try {
-    const risposta = await fetch('https://jsonplaceholder.typicode.com/posts/1');
-    const dati = await risposta.json();
-    console.log("Dati ricevuti:", dati);
-  } catch (errore) {
-    console.log("Errore nella richiesta:", errore);
-  }
+	try {
+		const risposta = await fetch(
+			"https://jsonplaceholder.typicode.com/posts/1"
+		);
+		const dati = await risposta.json();
+		console.log("Dati ricevuti:", dati);
+	} catch (errore) {
+		console.log("Errore nella richiesta:", errore);
+	}
 }
 
 prendiDati();
 
 // ESEGUIRE UNA RICHIESTA POST
 function inviaDati() {
-  fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      title: "Ciao",
-      body: "Messaggio di prova",
-      userId: 1
-    })
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (dati) {
-      console.log(dati);
-    })
-    .catch(function (error) {
-      console.log(error);
-  })
+	fetch("https://jsonplaceholder.typicode.com/posts", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({
+			title: "Ciao",
+			body: "Messaggio di prova",
+			userId: 1,
+		}),
+	})
+		.then(function (response) {
+			return response.json();
+		})
+		.then(function (dati) {
+			console.log(dati);
+		})
+		.catch(function (error) {
+			console.log(error);
+		});
 }
 
 inviaDati();
+
+// GESTIONE DEGLI ERRORI CON ASYNC E AWAIT
+async function prendiPost() {
+	const risposta = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+	try {
+		if (risposta.ok) {
+			const dati = await risposta.json();
+			console.log(dati);
+		} else {
+			console.log(risposta.status);
+		}
+	} catch (errore) {
+		console.log(errore.message);
+	}
+}
+
+prendiPost();
