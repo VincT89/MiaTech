@@ -347,3 +347,29 @@ async function eseguiOperazione(valido) {
 }
 
 eseguiOperazione(false);
+
+
+// FUNZIONI ASINCRONE IN SERIE
+async function primaOperazione() {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve("Prima completata");
+    }, 2000);
+  });
+}
+async function secondaOperazione() {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve("Seconda completata");
+    }, 3000);
+  });
+}
+async function esecutore() {
+  const risultato1 = await primaOperazione();
+  console.log(risultato1);
+
+  const risultato2 = await secondaOperazione();
+  console.log(risultato2);
+}
+
+esecutore();
