@@ -42,3 +42,16 @@ primaFase(5, function (valoreRaddoppiato) {
     console.log("Risultato finale:", risultatoFinale)
   })
 })
+
+// CREARE UNA PROMESSA SEMPLICE
+function mostraMessaggio() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve("Promessa risolta dopo 2 secondi!");
+    }, 2000)
+  });
+}
+
+mostraMessaggio().then(function (messaggio) {
+  console.log(messaggio);
+})
