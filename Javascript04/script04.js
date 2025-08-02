@@ -286,11 +286,11 @@ function task1() {
 	});
 }
 function task2() {
-  return new Promise(function (resolve) {
-    setTimeout(function () {
-      resolve("Task 2 completato");
-    }, 3000);
-  });
+	return new Promise(function (resolve) {
+		setTimeout(function () {
+			resolve("Task 2 completato");
+		}, 3000);
+	});
 }
 
 function task3() {
@@ -301,13 +301,25 @@ function task3() {
 	});
 }
 
-Promise.allSettled([task1(), task2(), task3()])
-  .then(function (risultati) {
-    risultati.forEach(function (risultato) {
-      if (risultato.status === "fulfilled") {
-        console.log(risultato.value);
-      } else {
-        console.log(risultato.reason)
-    }
-  })
-})
+Promise.allSettled([task1(), task2(), task3()]).then(function (risultati) {
+	risultati.forEach(function (risultato) {
+		if (risultato.status === "fulfilled") {
+			console.log(risultato.value);
+		} else {
+			console.log(risultato.reason);
+		}
+	});
+});
+
+// FUNZIONE ASINCRONA SEMPLICE
+async function esempio() {
+	let messaggio = await new Promise(function (resolve) {
+		setTimeout(function () {
+			resolve("Ok, risolta dopo 2 secondi");
+		}, 2000);
+	});
+
+	console.log(messaggio);
+}
+
+esempio();
