@@ -117,3 +117,26 @@ numeroCasuale()
   .catch(function (error) {
     console.log("Si è verificato un errore!", error)
   });
+
+// CATENA DI PROMESSE CON CONDIZIONI
+function catena() {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve(4);
+    }, 1000);
+  });
+}
+  
+catena()
+  .then(function (n) {
+    if (n % 2 === 0) {
+      console.log("Numero pari")
+      return n * 2;
+    } else {
+      console.log("Numero dispari")
+      return n + 5;
+  }
+  })
+  .then(function (result) {
+  console.log("Risultato:", result)
+})
