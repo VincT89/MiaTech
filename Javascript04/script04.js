@@ -386,3 +386,29 @@ async function prendiDati() {
 }
 
 prendiDati();
+
+// ESEGUIRE UNA RICHIESTA POST
+function inviaDati() {
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      title: "Ciao",
+      body: "Messaggio di prova",
+      userId: 1
+    })
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (dati) {
+      console.log(dati);
+    })
+    .catch(function (error) {
+      console.log(error);
+  })
+}
+
+inviaDati();
