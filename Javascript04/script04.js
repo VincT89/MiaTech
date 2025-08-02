@@ -373,3 +373,16 @@ async function esecutore() {
 }
 
 esecutore();
+
+// ESEGUIRE UNA RICHIESTA GET SEMPLICE
+async function prendiDati() {
+  try {
+    const risposta = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const dati = await risposta.json();
+    console.log("Dati ricevuti:", dati);
+  } catch (errore) {
+    console.log("Errore nella richiesta:", errore);
+  }
+}
+
+prendiDati();
