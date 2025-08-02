@@ -43,15 +43,24 @@ primaFase(5, function (valoreRaddoppiato) {
   })
 })
 
-// CREARE UNA PROMESSA SEMPLICE
+// CREARE UNA PROMESSA SEMPLICE / GESTIONE DI UNA PROMESSA CON CATCH
 function mostraMessaggio() {
   return new Promise(function (resolve, reject) {
     setTimeout(function () {
-      resolve("Promessa risolta dopo 2 secondi!");
+      let ok = true;
+      if (ok) {
+        resolve("Promessa risolta dopo 2 secondi!");
+      } else {
+        reject("Errore: qualcosa non ha funzionato!!")
+      }
     }, 2000)
   });
 }
 
-mostraMessaggio().then(function (messaggio) {
-  console.log(messaggio);
-})
+mostraMessaggio()
+  .then(function (messaggio) {
+    console.log(messaggio);
+  })
+  .catch(function (errore) {
+    console.log(errore);
+  });
