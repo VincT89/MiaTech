@@ -12,3 +12,14 @@ calcola(5, 5, function (risultato) {
     console.log("Il risultato è dispari")
   }
 });
+
+// FUNZIONE CON CALLBACK E PASSAGGIO DI PARAMETRI
+function prodottoCallback(a, b, callback) {
+  let prodotto = a * b;
+  callback(prodotto);
+}
+
+prodottoCallback(4, 5, function (risultato) {
+  console.log("Risultato ricevuto: ", risultato);
+  console.log("Il doppio e': ", risultato * 2);
+})
