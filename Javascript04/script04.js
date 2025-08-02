@@ -430,3 +430,19 @@ async function prendiPost() {
 }
 
 prendiPost();
+
+// COMPRENDERE UN CORS
+function provaFetch() {
+  fetch("http://example.com")
+    .then(function (response) {
+      return response.text();
+    })
+    .then(function (dati) {
+      console.log(dati);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+}
+
+provaFetch();
