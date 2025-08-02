@@ -276,3 +276,38 @@ Promise.race([caricaProfilo(), caricaAnteprima()])
 	.catch(function (errore) {
 		console.log(errore);
 	});
+
+// UTILIZZO DI PROMISE.ALLSETTLED
+function task1() {
+	return new Promise(function (resolve) {
+		setTimeout(function () {
+			resolve("Task 1 completato");
+		}, 4000);
+	});
+}
+function task2() {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve("Task 2 completato");
+    }, 3000);
+  });
+}
+
+function task3() {
+	return new Promise(function (resolve, reject) {
+		setTimeout(function () {
+			reject("Task 1 rifiutato");
+		}, 2000);
+	});
+}
+
+Promise.allSettled([task1(), task2(), task3()])
+  .then(function (risultati) {
+    risultati.forEach(function (risultato) {
+      if (risultato.status === "fulfilled") {
+        console.log(risultato.value);
+      } else {
+        console.log(risultato.reason)
+    }
+  })
+})
