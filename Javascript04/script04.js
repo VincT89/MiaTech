@@ -222,3 +222,32 @@ controllaAutorizzazione()
 	.catch(function (e) {
 		console.log(e);
 	});
+
+// UTILIZZO PROMISE.ALL
+function caricaNotifiche() {
+	return new Promise(function (resolve) {
+		setTimeout(function () {
+			resolve(["Notifica 1", "Notifica 2", "Notifica 3"]);
+		}, 1500);
+	});
+}
+
+function caricaMessaggi() {
+	return new Promise(function (resolve) {
+		setTimeout(function () {
+			resolve([
+				{ da: "Vincenzo", testo: "Tutto ok" },
+				{ da: "Antonio", testo: "Sto benissimo" },
+			]);
+		}, 2500);
+	});
+}
+
+Promise.all([caricaNotifiche(), caricaMessaggi()])
+	.then(function ([notifiche, messaggi]) {
+		console.log("Notifiche:", notifiche);
+		console.log("Messaggi: ", messaggi);
+	})
+	.catch(function (errore) {
+		console.log(errore);
+	});
