@@ -166,3 +166,14 @@ promessaCasuale()
 	.catch(function (errore) {
 		console.log("Errore", errore);
 	});
+
+// GESTIONE DEGLI ERRORI CON CATCH
+function promessaRifiutata() {
+	return new Promise(function (resolve, reject) {
+		reject("Mi dispiace qualcosa è andato storto");
+	});
+}
+
+promessaRifiutata().catch(function (e) {
+	console.log(e);
+});
