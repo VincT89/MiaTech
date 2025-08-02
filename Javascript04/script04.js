@@ -251,3 +251,28 @@ Promise.all([caricaNotifiche(), caricaMessaggi()])
 	.catch(function (errore) {
 		console.log(errore);
 	});
+
+// UTILIZZO PROMISE.RACE
+function caricaProfilo() {
+	return new Promise(function (resolve) {
+		setTimeout(function () {
+			resolve("Profilo Caricato");
+		}, 3000);
+	});
+}
+
+function caricaAnteprima() {
+	return new Promise(function (resolve) {
+		setTimeout(function () {
+			resolve("Anteprima disponibile");
+		}, 1000);
+	});
+}
+
+Promise.race([caricaProfilo(), caricaAnteprima()])
+	.then(function (risultato) {
+		console.log("Prima Promessa Risolta:", risultato);
+	})
+	.catch(function (errore) {
+		console.log(errore);
+	});
