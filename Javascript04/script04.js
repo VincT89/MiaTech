@@ -23,3 +23,22 @@ prodottoCallback(4, 5, function (risultato) {
   console.log("Risultato ricevuto: ", risultato);
   console.log("Il doppio e': ", risultato * 2);
 })
+
+// CALLBACK ANNIDATI
+function primaFase(num, dopoDoppio) {
+  let raddoppio = num * 2;
+  console.log("Numero raddoppiato:", raddoppio);
+  dopoDoppio(raddoppio);
+}
+
+function secondaFase(n, dopoSottrazione) {
+  let sottrai = n - 2;
+  console.log("Valore dopo la sottrazione:", sottrai);
+  dopoSottrazione(sottrai);
+}
+
+primaFase(5, function (valoreRaddoppiato) {
+  secondaFase(valoreRaddoppiato, function (risultatoFinale) {
+    console.log("Risultato finale:", risultatoFinale)
+  })
+})
