@@ -177,3 +177,23 @@ function promessaRifiutata() {
 promessaRifiutata().catch(function (e) {
 	console.log(e);
 });
+
+
+// GESTIONE DEGLI ERRORI CON THEN E CATCH
+function gestione(successo) {
+  return new Promise(function (resolve, reject) {
+    if (successo) {
+      resolve("Operazione completata con successo")
+    } else {
+      reject('Operazione fallita')
+    }
+  });
+}
+
+gestione(true)
+  .then(function (mex) {
+    console.log(mex);
+  })
+  .catch(function (errore) {
+    console.log(errore);
+})
