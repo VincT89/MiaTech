@@ -64,3 +64,28 @@ mostraMessaggio()
   .catch(function (errore) {
     console.log(errore);
   });
+
+// PROMESSA CON FINALLY
+function promiseFinally() {
+  return new Promise(function (resolve, reject) {
+    let successo = false;
+    setTimeout(function () {
+      if (successo) {
+        resolve('Operazione risolta')
+      } else {
+        reject('Operazione rifiutata')
+      }
+    }, 2000);
+  });
+}
+  
+promiseFinally()
+  .then(function (messaggio) {
+    console.log(messaggio);
+  })
+  .catch(function (errore) {
+    console.log(errore);
+  })
+  .finally(function () {
+    console.log("Operazione completata")
+  });
