@@ -89,3 +89,31 @@ promiseFinally()
   .finally(function () {
     console.log("Operazione completata")
   });
+
+// CATENA DI PROMESSE SEMPLICI
+function numeroCasuale() {
+  return new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        let numero = 0.1;
+        if (numero < 0) {
+          resolve(numero);
+        } else {
+          reject("Numero non valido")
+        }
+      }, 1000);
+    })
+}
+  
+numeroCasuale()
+  .then(function (n) {
+    return n * 2;
+  })
+  .then(function (raddoppiato) {
+    return raddoppiato + 3;
+  })
+  .then(function (risultato) {
+    console.log("Risultato finale:", risultato);
+  })
+  .catch(function (error) {
+    console.log("Si è verificato un errore!", error)
+  });
