@@ -323,3 +323,27 @@ async function esempio() {
 }
 
 esempio();
+
+// GESTIONE ERRORI CON TRY E CATCH
+function operazione(booleano) {
+	return new Promise(function (resolve, reject) {
+		setTimeout(function () {
+			if (booleano) {
+				resolve("Ben fatto");
+			} else {
+				reject("Ops, sbagliato qualcosa");
+			}
+		}, 1000);
+	});
+}
+
+async function eseguiOperazione(valido) {
+  try {
+    let risultato = await operazione(valido);
+    console.log(risultato);
+  } catch (errore) {
+    console.log(errore);
+  }
+}
+
+eseguiOperazione(false);
