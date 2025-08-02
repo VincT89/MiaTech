@@ -178,22 +178,47 @@ promessaRifiutata().catch(function (e) {
 	console.log(e);
 });
 
-
 // GESTIONE DEGLI ERRORI CON THEN E CATCH
 function gestione(successo) {
-  return new Promise(function (resolve, reject) {
-    if (successo) {
-      resolve("Operazione completata con successo")
-    } else {
-      reject('Operazione fallita')
-    }
-  });
+	return new Promise(function (resolve, reject) {
+		if (successo) {
+			resolve("Operazione completata con successo");
+		} else {
+			reject("Operazione fallita");
+		}
+	});
 }
 
 gestione(true)
-  .then(function (mex) {
-    console.log(mex);
-  })
-  .catch(function (errore) {
-    console.log(errore);
-})
+	.then(function (mex) {
+		console.log(mex);
+	})
+	.catch(function (errore) {
+		console.log(errore);
+	});
+
+// GESTIONE DEGLI ERRORI IN UNA CATENA DI PROMESSE
+function controllaAutorizzazione() {
+	return new Promise(function (resolve, reject) {
+		let autorizzato = Math.random() > 0.5;
+		setTimeout(() => {
+			if (autorizzato) {
+				resolve("Accesso consentito");
+			} else {
+				reject("Accesso negato");
+			}
+		}, 3000);
+	});
+}
+
+controllaAutorizzazione()
+	.then(function (m) {
+		console.log(m);
+		return "Benvenuto nel Sistema";
+	})
+	.then(function (saluto) {
+		console.log(saluto);
+	})
+	.catch(function (e) {
+		console.log(e);
+	});
