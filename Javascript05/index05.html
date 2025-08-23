@@ -8,6 +8,7 @@
 <body>
   <p>Questo è un paragrafo</p>
   <p id="paragrafo">GetElementById</p>
+  <div id="contenitore"></div>
 </body>
 <script>
   console.log(document);
@@ -24,6 +25,10 @@
   paragrafo.style.fontSize = "20px";
 
   paragrafo.innerHTML += '<button onclick="alert(\'Hai cliccato il bottone!\')">Cliccami</button>';
+
+  let contenitore = document.getElementById("contenitore");
+  let lista = document.createElement("ul");
+  contenitore.appendChild(lista);
 
 </script>
 </html>
