@@ -28,3 +28,14 @@ for(let c of cookies) {
 // elimina il cookie
 document.cookie = "utente=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 console.log("Cookie eliminato:", document.cookie);
+
+
+// UTILIZZARE IL LOCALSTORAGE
+// salva il dato
+localStorage.setItem("utente", "mario");
+console.log("Dato salvato:", localStorage.getItem("utente"));
+// recupera il dato
+console.log("Dato recuperato:", localStorage.getItem("utente"));
+// elimina il dato
+localStorage.removeItem("utente");
+console.log("Dato eliminato:", localStorage.getItem("utente"));
