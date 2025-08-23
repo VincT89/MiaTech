@@ -39,3 +39,14 @@ console.log("Dato recuperato:", localStorage.getItem("utente"));
 // elimina il dato
 localStorage.removeItem("utente");
 console.log("Dato eliminato:", localStorage.getItem("utente"));
+
+
+// UTILIZZARE IL SESSIONSTORAGE
+// salva il dato
+sessionStorage.setItem("utente", "mario");
+console.log("Dato salvato:", sessionStorage.getItem("utente"));
+// recupera il dato
+console.log("Dato recuperato:", sessionStorage.getItem("utente"));
+// elimina il dato
+sessionStorage.removeItem("utente");
+console.log("Dato eliminato:", sessionStorage.getItem("utente"));
