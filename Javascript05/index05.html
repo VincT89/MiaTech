@@ -9,6 +9,14 @@
   <p>Questo è un paragrafo</p>
   <p id="paragrafo">GetElementById</p>
   <div id="contenitore"></div>
+
+  <form action="" id="form">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name">
+    <label for="surname">Cognome:</label>
+    <input type="text" id="surname" name="surname">
+    <button type="submit">Invia</button>
+  </form>
 </body>
 <script>
   console.log(document);
@@ -35,6 +43,19 @@
     item.innerText = "Elemento " + i;
     lista.appendChild(item);
   }
+
+  let form = document.getElementById("form");
+  form.addEventListener("submit", function(event){
+    let nome = document.getElementById("name").value.trim();
+    let cognome = document.getElementById("surname").value.trim();
+
+    if(nome === "" || cognome === "") {
+      alert("Entrambi i campi sono obbligatori.");
+      event.preventDefault();
+    } else {
+      alert("Nome: " + nome + "\nCognome: " + cognome);
+    }
+  })
 
 </script>
 </html>
