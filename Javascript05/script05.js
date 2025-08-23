@@ -50,3 +50,10 @@ console.log("Dato recuperato:", sessionStorage.getItem("utente"));
 // elimina il dato
 sessionStorage.removeItem("utente");
 console.log("Dato eliminato:", sessionStorage.getItem("utente"));
+
+
+// UTILIZZARE LOCALSTORAGE E SESSIONSTORAGE INSIEME
+localStorage.setItem("utente", "mario");
+sessionStorage.setItem("utente", "mario");
+console.log("Dato salvato in LocalStorage:", localStorage.getItem("utente"));
+console.log("Dato salvato in SessionStorage:", sessionStorage.getItem("utente"));
