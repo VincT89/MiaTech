@@ -15,4 +15,16 @@ fetch(corsApi)
   .then(data => console.log(data))
   .catch(error => console.error("Error:", error));
 
-  
+// GESTIRE I COOKIES
+// salva il cookie
+document.cookie = "utente=mario; path=/";
+console.log("Cookie:", document.cookie);
+// recupera il cookie
+let cookies = document.cookie.split("; ");
+for(let c of cookies) {
+  let [name, value] = c.split("=");
+  console.log(`Cookie Name: ${name}, Cookie Value: ${value}`);
+};
+// elimina il cookie
+document.cookie = "utente=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+console.log("Cookie eliminato:", document.cookie);
