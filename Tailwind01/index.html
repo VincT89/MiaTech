@@ -12,6 +12,12 @@
         extend: {
           colors: {
             customColor: '#7209b7',
+            btnColor: {
+              primary: '#2563eb',
+              secondary: '#10b981',
+              accent: '#f59e0b',
+              danger: '#dc2626',
+            },
           },
           spacing: {
             customMargin: '2.5rem',
@@ -48,9 +54,18 @@
     <p class="text-customColor">Questo è un contenitore centrale con del contenuto personalizzato.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores cum ex ipsa totam, sed officiis velit! Ipsum,
       vel, aut eaque quos porro voluptatibus necessitatibus quo, ratione sed dolorem dignissimos fugiat!</p>
-    <p class="font-customFont">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis nam fuga, aliquid ipsa, earum aperiam qui ducimus
+    <p class="font-customFont">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis nam fuga, aliquid ipsa,
+      earum aperiam qui ducimus
       dolorem velit est recusandae pariatur, cumque ea dolores nesciunt eos blanditiis fugiat. Sunt.</p>
   </div>
+
+  <div class="container m-6 p-4">
+    <button class="px-6 py-2 rounded-lg bg-btnColor-primary text-white hover:opacity-90">Primary</button>
+    <button class="px-6 py-2 rounded-lg bg-btnColor-secondary text-white hover:opacity-90">Secondary</button>
+    <button class="px-6 py-2 rounded-lg bg-btnColor-accent text-white hover:opacity-90">Accent</button>
+    <button class="px-6 py-2 rounded-lg bg-btnColor-danger text-white hover:opacity-90">Danger</button>
+  </div>
+
 </body>
 
 </html>
