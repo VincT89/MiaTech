@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tailwind CSS</title>
-  <script src="https://cdn.tailwindcss.com"></script> // Tailwind v3.4.17
+  <script src="https://cdn.tailwindcss.com"></script> <!--tailwind 3.4.17-->
   <script>
     tailwind.config = {
+      darkMode: 'media', // con media segue il tema scuro in base alle preferenze del sistema di google, basta poi dare le classi dark: per gli elementi che devono cambiare
       theme: {
         extend: {
           colors: {
@@ -32,9 +33,9 @@
   </script>
 </head>
 
-<body>
+<body class="bg-white dark:bg-gray-500">
   <h1 class="text-4xl font-bold text-center p-4 bg-blue-600 text-white">Pagina con Tailwind CSS</h1>
-  <p class="text-lg text-gray-700 hover:text-blue-800 m-4">Questo è un paragrafo stilizzato con Tailwind CSS.</p>
+  <p class="text-lg text-gray-700 hover:text-blue-800 m-4 dark:text-gray-300">Questo è un paragrafo stilizzato con Tailwind CSS.</p>
   <ul class="p-4 bg-gray-100 rounded-lg m-4 text-gray-700 font-bold">
     <li class="p-4 border-b border-gray-200">Primo Item</li>
     <li class="p-4 border-b border-gray-200">Secondo Item</li>
