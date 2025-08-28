@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tailwind CSS</title>
   <script src="https://cdn.tailwindcss.com"></script> <!--tailwind 3.4.17-->
-    <style type="text/tailwindcss">
+  <style type="text/tailwindcss">
     @layer components {
     .btn-custom {
       @apply px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition;
@@ -46,6 +46,29 @@
           },
         }
       },
+      plugins: [
+        function ({ addComponents }) {
+          addComponents({
+            '.card': {
+              backgroundColor: '#e0f2fe',
+              border: '2px solid #0284c7',
+              borderRadius: '0.5rem',
+              padding: '1rem',
+            },
+            '.btn': {
+              padding: '0.5rem 1rem',
+              borderRadius: '0.5rem',
+              fontWeight: '600',
+              color: 'white',
+              backgroundColor: '#2563eb',
+              marginTop: '0.5rem',
+            },
+            '.btn-secondary': {
+              backgroundColor: '#10b981',
+            }
+          });
+        }
+      ]
     }
   </script>
 
@@ -160,6 +183,15 @@
     <button class="btn-custom">Pulsante 1</button>
     <button class="btn-custom">Pulsante 2</button>
   </div>
+
+  <div class="card">
+    <h2 class="text-xl font-bold mb-2">Titolo Card</h2>
+    <p>Contenuto della card riutilizzabile.</p>
+  </div>
+
+  <button class="btn">Primario</button>
+  <button class="btn btn-secondary">Secondario</button>
+
 
   <footer class="p-6 text-center">
     <p class="text-sm text-textPalette-paragraph">© 2025 - Esempio Layout con Tailwind CSS</p>
