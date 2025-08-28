@@ -8,7 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script> <!--tailwind 3.4.17-->
   <script>
     tailwind.config = {
-      darkMode: 'media', // con media segue il tema scuro in base alle preferenze del sistema di google, basta poi dare le classi dark: per gli elementi che devono cambiare
+      // darkMode: 'media', // con media segue il tema scuro in base alle preferenze del sistema di google, basta poi dare le classi dark: per gli elementi che devono cambiare
+      darkMode: 'class', // con class si attiva il tema scuro manualmente
       theme: {
         extend: {
           colors: {
@@ -46,6 +47,14 @@
   <h1 class="text-4xl font-bold text-center p-4 bg-blue-600 text-white">Pagina con Tailwind CSS</h1>
   <p class="text-lg text-gray-700 hover:text-blue-800 m-4 dark:text-gray-300">Questo è un paragrafo stilizzato con
     Tailwind CSS.</p>
+
+    <div class="p-4">
+    <button id="theme-toggle" class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+      Modalità Scura
+    </button>
+  </div>
+
+  
   <ul class="p-4 bg-gray-100 rounded-lg m-4 text-gray-700 font-bold">
     <li class="p-4 border-b border-gray-200">Primo Item</li>
     <li class="p-4 border-b border-gray-200">Secondo Item</li>
@@ -100,6 +109,19 @@
     <p class="text-sm text-textPalette-paragraph">© 2025 - Esempio Layout con Tailwind CSS</p>
   </footer>
 
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    toggleBtn.addEventListener('click', () => {
+      htmlElement.classList.toggle('dark');
+      if(htmlElement.classList.contains('dark')) {
+        toggleBtn.textContent = 'Modalità Chiara';
+      } else {
+        toggleBtn.textContent = 'Modalità Scura';
+      }
+    });
+  </script>
 </body>
 
 </html>
