@@ -1,11 +1,10 @@
-import './App.css'
+import { HelloWorld } from './components/HelloWorld'
+import './index.css' 
 
 function App() {
- 
-
   return (
     <>
-     <h1>Preparazione per il primo componente</h1>
+      <HelloWorld />
     </>
   )
 }
