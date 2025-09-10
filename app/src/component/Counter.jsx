@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const Counter = () => {
-	const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
+  
+  useEffect(() => {
+    document.title = `Count: ${count}`;
+  }, [count]);
 
 	return (
 		<div className="flex items-center justify-center mt-100">
