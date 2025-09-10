@@ -5,6 +5,7 @@ import { TextInput } from './component/TextInput';
 import { LoginForm } from './component/LoginForm';
 import { UncontrolledInput } from './component/UncontrolledInput';
 import { List } from './component/List';
+import { ContainerCard } from './component/ContainerCard';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <LoginForm />
       <UncontrolledInput />
       <List />
+      <ContainerCard />
     </>
   )
 }
