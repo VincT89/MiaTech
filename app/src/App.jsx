@@ -4,6 +4,7 @@ import { Counter } from './component/Counter';
 import { TextInput } from './component/TextInput';
 import { LoginForm } from './component/LoginForm';
 import { UncontrolledInput } from './component/UncontrolledInput';
+import { List } from './component/List';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <TextInput />
       <LoginForm />
       <UncontrolledInput />
+      <List />
     </>
   )
 }
