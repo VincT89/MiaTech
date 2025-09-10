@@ -13,6 +13,9 @@ export const Counter = () => {
           </button>
           <button onClick={() => setCount(count - 1)} className="mt-4 p-2 text-white">
 						Decrementa
+          </button>
+          <button onClick={() => setCount(0)} className="mt-4 p-2 text-white">
+						Reset
 					</button>
 				</div>
 			</div>
