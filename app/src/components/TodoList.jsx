@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
 import useFilteredTodos from "../hooks/useFilteredTodos";
@@ -7,7 +7,12 @@ function TodoList() {
 	const { data, loading, error } = useFetch(
 		"https://jsonplaceholder.typicode.com/todos"
 	);
-	const [inputRicerca, setInputRicerca] = useState("");
+  const [inputRicerca, setInputRicerca] = useState("");
+  
+  const handleInputChange = useCallback((e) => {
+    setInputRicerca(e.target.value);
+  }, []);
+
 	const todosFiltrati = useFilteredTodos(data || [], inputRicerca);
 
 	if (loading) {
@@ -25,7 +30,7 @@ function TodoList() {
 				type="text"
 				placeholder="Cerca TO-DO....."
 				value={inputRicerca}
-				onChange={(e) => setInputRicerca(e.target.value)}
+				onChange={handleInputChange}
 				className="border rounded-2xl p-2 mb-4 w-full"
 			/>
 			<div className="h-80 w-200 overflow-y-auto">
