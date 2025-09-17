@@ -6,6 +6,7 @@ import { LoginForm } from './components/LoginForm';
 import { UncontrolledInput } from './components/UncontrolledInput';
 import { List } from './components/List';
 import { ContainerCard } from './components/ContainerCard';
+import TodoList from './components/TodoList';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <UncontrolledInput />
       <List />
       <ContainerCard />
+      <TodoList />
     </>
   )
 }
