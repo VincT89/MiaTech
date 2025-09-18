@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo, useRef } from "react";
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
 // import useFilteredTodos from "../hooks/useFilteredTodos";
@@ -7,7 +7,15 @@ function TodoList() {
 	const { data, loading, error } = useFetch(
 		"https://jsonplaceholder.typicode.com/todos"
 	);
-  const [inputRicerca, setInputRicerca] = useState("");
+	const [inputRicerca, setInputRicerca] = useState("");
+	
+	const inputRef = useRef(null);
+
+	useEffect(() => {
+		if (inputRef.current) {
+			inputRef.current.focus();
+		}
+	}, []);
   
   const handleInputChange = useCallback((e) => {
     setInputRicerca(e.target.value);
@@ -35,6 +43,7 @@ function TodoList() {
 		<div className="mt-30 w-full border p-6 rounded-lg ">
 			<h2 className="text-2xl font-bold mb-4 mt-">Lista To-Do</h2>
 			<input
+				ref={inputRef}
 				type="text"
 				placeholder="Cerca TO-DO....."
 				value={inputRicerca}
