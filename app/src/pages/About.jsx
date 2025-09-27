@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 export default function About() {
+  const navigate = useNavigate();
+
+  const handleGoHome = () => {
+    navigate("/");
+  };
   return (
     <div className="p-6 space-y-6 text-center m-6">
       <h1 className="text-3xl font-bold mb-4">About</h1>
@@ -22,6 +29,8 @@ export default function About() {
         <li className="text-lg font-semibold">TodoList</li>
         <p className="m-2">Un componente per la gestione di una lista di attività da svolgere ricavata da un'API.</p>
       </ul>
+
+      <button onClick={handleGoHome} className="mt-4 p-2 bg-blue-500 text-white rounded">Torna alla Home</button>
     </div>
   )
 }
