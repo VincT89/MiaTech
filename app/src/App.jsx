@@ -1,27 +1,31 @@
-import './index.css';
-import { HelloWorld } from './components/HelloWorld';
-import { Counter } from './components/Counter';
-import { TextInput } from './components/TextInput';
-import { LoginForm } from './components/LoginForm';
-import { UncontrolledInput } from './components/UncontrolledInput';
-import { List } from './components/List';
-import { ContainerCard } from './components/ContainerCard';
-import TodoList from './components/TodoList';
-import { TodosProvider } from './context/TodosProvider';
+import "./index.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { TodosProvider } from "./context/TodosProvider";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
     <TodosProvider>
-      <HelloWorld />
-      <Counter />
-      <TextInput />
-      <LoginForm />
-      <UncontrolledInput />
-      <List />
-      <ContainerCard />
-      <TodoList />
+      <Router>
+        <nav className="p-4  flex gap-4 w-full border-b mb-6">
+          <ul className="flex gap-6">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
     </TodosProvider>
-  )
+  );
 }
 
 export default App;
