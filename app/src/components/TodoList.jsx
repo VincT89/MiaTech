@@ -1,10 +1,12 @@
 import React, { useEffect, useMemo, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux"; 
+import { setTodos } from "../store/features/todoSlice"; 
 import useFetch from "../hooks/useFetch";
-import { useTodos } from "../context/useTodos";
 import { Link, useSearchParams } from "react-router-dom";
 
 function TodoList() {
-  const { todos, setTodos } = useTodos();
+  const dispatch = useDispatch();
+  const todos = useSelector((state) => state.todos.todos); // Ottieni i to-do dallo store Redux
   const { data, loading, error } = useFetch(
     "https://jsonplaceholder.typicode.com/todos"
   );
@@ -18,16 +20,20 @@ function TodoList() {
     if (inputRef.current) inputRef.current.focus();
   }, []);
 
+  // Quando i dati sono caricati, imposta i to-do nel Redux store
   useEffect(() => {
-    if (data) setTodos(data);
-  }, [data, setTodos]);
+    if (data) {
+      dispatch(setTodos(data)); // Dispatch per aggiornare lo stato dei to-do
+    }
+  }, [data, dispatch]);
 
   // aggiorna i parametri della query quando l'input cambia
   const handleInputChange = (e) => {
     const value = e.target.value;
-    setSearchParams(value ? { q: value } : {});
+    setSearchParams(value ? { q: value } : {}); // Aggiorna i parametri della query
   };
 
+  // Filtra i to-do in base alla ricerca
   const todosFiltrati = useMemo(() => {
     if (!todos) return [];
     const terminiRicerca = inputRicerca.toLowerCase();
@@ -36,7 +42,7 @@ function TodoList() {
     );
   }, [todos, inputRicerca]);
 
-  if (loading) return <p>Caricamento....</p>;
+  if (loading) return <p>Caricamento...</p>;
   if (error) return <p>Errore: {error.message}</p>;
 
   return (
@@ -45,7 +51,7 @@ function TodoList() {
       <input
         ref={inputRef}
         type="text"
-        placeholder="Cerca TO-DO....."
+        placeholder="Cerca TO-DO..."
         value={inputRicerca}
         onChange={handleInputChange}
         className="border rounded-2xl p-2 mb-4 w-full"
