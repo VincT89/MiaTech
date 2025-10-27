@@ -10,8 +10,7 @@ function addTodo(title: string): void {
     completed: false,
   };
   todos.push(newTodo);
-}
-
+};
 
 
 // Funzione per assegnare un todo a un utente
@@ -22,4 +21,10 @@ function assignTodoToUser(todoId: number, userId: number): void {
   }else {
     console.log(`Todo con id ${todoId} non trovato.`);
   }
-}
+};
+
+// Funzione per ottenere i todo di un utente
+function getUserTodos(userId: number): Todo[] {
+  return todos.filter(t => t.userId === userId);
+};
+
