@@ -31,3 +31,15 @@ const getUserTodos = (userId: number): Todo[] => {
 const throwError = (value: string): never => {
   throw new Error(`Not valid value: ${value}`);
 };
+
+// Funzione per gestire tipi dinamici con Unknown
+const parseInput = (input: unknown): string => {
+  if (typeof input === 'string') {
+    return input;
+  } else if (typeof input === 'number') {
+    return input.toString();
+  } else {
+    return throwError('Input deve essere stringa o numero');
+  } 
+};
+
