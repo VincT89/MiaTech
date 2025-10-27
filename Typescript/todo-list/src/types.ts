@@ -6,10 +6,14 @@ interface Todo {
   metadata: any; // con any accetto qualsiasi tipo di dato
 };
 
+interface TodoWithMetadata extends Todo {
+  metadata: any;
+}
+
 interface User {
   id: number;
   name: string;
   email: string;
 };
 
-export type { Todo, User };
+export type { Todo, User, TodoWithMetadata };
