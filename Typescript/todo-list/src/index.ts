@@ -14,3 +14,12 @@ function addTodo(title: string): void {
 
 
 
+// Funzione per assegnare un todo a un utente
+function assignTodoToUser(todoId: number, userId: number): void {
+  const todo = todos.find(t => t.id === todoId);
+  if (todo) {
+    todo.userId = userId;
+  }else {
+    console.log(`Todo con id ${todoId} non trovato.`);
+  }
+}
