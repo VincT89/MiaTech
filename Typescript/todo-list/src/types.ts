@@ -4,4 +4,10 @@ interface Todo {
   completed: boolean;
 };
 
-export type { Todo };
+interface User {
+  id: number;
+  name: string;
+  email: string;
+};
+
+export type { Todo, User };
