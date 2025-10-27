@@ -8,6 +8,7 @@ const addTodo = (title: string): void => {
     id: todos.length + 1,
     title,
     completed: false,
+    metadata: {},
   };
   todos.push(newTodo);
 };
