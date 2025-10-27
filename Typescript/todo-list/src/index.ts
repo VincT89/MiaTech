@@ -3,7 +3,7 @@ import { Todo } from './types';
 const todos: Todo[] = [];
 
 // Funzione per aggiungere un todo
-function addTodo(title: string): void {
+const addTodo = (title: string): void => {
   const newTodo: Todo = {
     id: todos.length + 1,
     title,
@@ -12,9 +12,8 @@ function addTodo(title: string): void {
   todos.push(newTodo);
 };
 
-
 // Funzione per assegnare un todo a un utente
-function assignTodoToUser(todoId: number, userId: number): void {
+const assignTodoToUser = (todoId: number, userId: number): void => {
   const todo = todos.find(t => t.id === todoId);
   if (todo) {
     todo.userId = userId;
@@ -24,7 +23,11 @@ function assignTodoToUser(todoId: number, userId: number): void {
 };
 
 // Funzione per ottenere i todo di un utente
-function getUserTodos(userId: number): Todo[] {
+const getUserTodos = (userId: number): Todo[] => {
   return todos.filter(t => t.userId === userId);
 };
 
+// Funzione per gestire errori con never
+const throwError = (value: string): never => {
+  throw new Error(`Not valid value: ${value}`);
+};
