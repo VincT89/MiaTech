@@ -1,3 +1,3 @@
-const myName: string = "Vincenzo";
+import { Todo } from './types';
 
-console.log(myName);
+const todos: Todo[] = [];
