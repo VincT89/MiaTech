@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es6",            // Imposta il target JavaScript a ES6
+    "module": "commonjs",       // Usa il sistema di moduli CommonJS
+    "strict": true,             // Abilita tutte le verifiche di tipo
+    "esModuleInterop": true,    // Permette l'interoperabilità con moduli ES6
+    "skipLibCheck": true,       // Salta la verifica delle definizioni di tipo delle librerie
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*.ts"               // Includi tutti i file .ts nella directory src
+  ]
+}
