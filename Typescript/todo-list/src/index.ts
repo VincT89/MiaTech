@@ -129,3 +129,16 @@ const todosProject = [
 
 const project = createProject(1, "Progetto test", usersProject, todosProject);
 console.log("Progetto creato:", project);
+
+// Funzione per aggiornare lo stato di un todo
+const updateTodoStatus = (todoId: number, status: number): void => {
+  const todo = todos.find((t) => t.id === todoId);
+  if (todo) {
+    todo.status = status;
+  } else {
+    console.log(`Todo con id ${todoId} non trovato.`);
+  }
+};
+
+updateTodoStatus(1, 2);
+console.log("Todo con stato aggiornato:", todos.find((t) => t.id === 1));
