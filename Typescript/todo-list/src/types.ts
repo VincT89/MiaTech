@@ -18,4 +18,11 @@ interface User {
   readonly todos: TodoInfo[]; // readonly per indicare che non può essere modificato ma solo letto
 };
 
-export type { TodoInfo, User };
+interface Project {
+  id: number;
+  name: string;
+  users: User[];
+  todos: TodoInfo[];
+}
+
+export type { TodoInfo, User, Project };
