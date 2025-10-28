@@ -3,12 +3,13 @@ interface Todo {
   title: string;
   completed: boolean;
   userId?: number; // con il ? gli dico che è opzionale quindi accetta anche undefined
-  metadata: string | object;
 };
 
 interface TodoWithMetadata extends Todo {
   metadata: string | object;
 }
+
+type TodoInfo = Todo & TodoWithMetadata;
 
 interface User {
   id: number;
@@ -16,4 +17,4 @@ interface User {
   email: string;
 };
 
-export type { Todo, User, TodoWithMetadata };
+export type { TodoInfo, User };
