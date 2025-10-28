@@ -15,6 +15,7 @@ interface User {
   id: number;
   name: string;
   email: string;
+  readonly todos: TodoInfo[]; // readonly per indicare che non può essere modificato ma solo letto
 };
 
 export type { TodoInfo, User };
