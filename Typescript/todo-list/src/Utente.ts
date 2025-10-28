@@ -1,3 +1,5 @@
+// cambio nome file Utente.ts per conflitto in index.ts per duplicazione nome User
+
 
 interface Todo {
   id: number;
@@ -5,7 +7,7 @@ interface Todo {
   completed: boolean;
 }
 
-class User {
+class Utente {
   id: number;
   name: string;
   email: string | undefined;
@@ -24,4 +26,4 @@ class User {
   }
 };
 
-export { User, Todo };
+export { Utente, Todo };

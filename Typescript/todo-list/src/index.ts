@@ -1,5 +1,7 @@
 import { Project, TodoInfo, User } from "./types";
 
+import { Utente, Todo } from "./Utente";
+
 const todos: TodoInfo[] = [];
 
 // Funzione per aggiungere un todo
@@ -142,3 +144,18 @@ const updateTodoStatus = (todoId: number, status: number): void => {
 
 updateTodoStatus(1, 2);
 console.log("Todo con stato aggiornato:", todos.find((t) => t.id === 1));
+
+// Creazione utenti
+const utente1 = new Utente(1, "Mario Rossi", "mario.rossi@gmail.it");
+const utente2 = new Utente(2, "Luigi Bianchi");
+
+// Creazione todo
+const todo1: Todo = { id: 1, title: "Fare la spesa", completed: false };
+const todo2: Todo = { id: 2, title: "Pulire la casa", completed: false };
+
+// Aggiunta todo agli utenti
+utente1.addTodo(todo1);
+utente2.addTodo(todo2);
+
+console.log("Utente 1:", utente1);
+console.log("Utente 2:", utente2);
