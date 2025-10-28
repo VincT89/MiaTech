@@ -8,7 +8,8 @@ const addTodo = (title: string): void => {
 		id: todos.length + 1,
 		title,
 		completed: false,
-		metadata: {},
+    metadata: {},
+    status: 0,
 	};
 	todos.push(newTodo);
 };
@@ -108,7 +109,8 @@ const usersProject: User[] = [
 				title: "Imparare TypeScript Avanzato",
 				completed: true,
 				metadata: {},
-				userId: 101,
+        userId: 101,
+        status: 1,
 			},
 		],
 	},
@@ -121,6 +123,7 @@ const todosProject = [
     completed: false,
     metadata: {},
     userId: 101,
+    status: 1,
   }
 ];
 

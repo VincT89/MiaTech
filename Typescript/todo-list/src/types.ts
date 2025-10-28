@@ -3,6 +3,7 @@ interface Todo {
   title: string;
   completed: boolean;
   userId?: number; // con il ? gli dico che è opzionale quindi accetta anche undefined
+  status: TodoStatus;
 };
 
 interface TodoWithMetadata extends Todo {
@@ -23,6 +24,12 @@ interface Project {
   name: string;
   users: User[];
   todos: TodoInfo[];
-}
+};
 
-export type { TodoInfo, User, Project };
+enum TodoStatus {
+  Pending, // 0
+  InProgress, // 1
+  Completed, // 2
+};
+
+export type { TodoInfo, User, Project, TodoStatus };
