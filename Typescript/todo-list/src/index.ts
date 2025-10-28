@@ -73,3 +73,14 @@ const updateTodo = (todoId: number, updates: Partial<TodoInfo>): void => {
 
 updateTodo(1, { completed: true, title: 'Imparare TypeScript Avanzato' });
 console.log('Todo aggiornato:', todos.find(t => t.id === 1));
+
+// Funzione tuple che restituisce titolo e stato di un todo
+const getTodoSummary = (todoId: number): [string, boolean] | null => {
+  const todo = todos.find(t => t.id === todoId);
+  if (todo) {
+    return [todo.title, todo.completed];
+  }
+  return null;
+};
+
+console.log('Riepilogo Todo 1:', getTodoSummary(1));
