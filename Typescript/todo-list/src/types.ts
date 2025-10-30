@@ -34,6 +34,8 @@ enum TodoStatus {
 
 type PartialTodo = Partial<Todo>; // rende tutte le proprietà di Todo opzionali
 
+type TodoRecord = Record<number, Todo>; // crea un oggetto con chiavi di tipo number e valori di tipo Todo
 
 
-export type { TodoInfo, User, Project, TodoStatus, PartialTodo };
+
+export type { TodoInfo, User, Project, TodoStatus, PartialTodo, TodoRecord };

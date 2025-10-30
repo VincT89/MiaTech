@@ -178,3 +178,18 @@ const updatePartialTodo = (todoId: number, updates: Partial<TodoInfo>): void => 
 	}
 };
 updatePartialTodo(2, { title: "Fare la spesa e cucinare", completed: false });
+
+
+// convertArrayToRecord
+import { TodoRecord } from "./types";
+
+const convertArrayToRecord = (todos: TodoInfo[]): TodoRecord => {
+	const record: TodoRecord = {};
+	todos.forEach((todo) => {
+		record[todo.id] = todo;
+	});
+	return record;
+};
+
+const todoRecord = convertArrayToRecord(todos);
+console.log("Todo Record:", todoRecord);
