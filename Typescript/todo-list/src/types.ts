@@ -32,6 +32,8 @@ enum TodoStatus {
   Completed, // 2
 };
 
+type PartialTodo = Partial<Todo>; // rende tutte le proprietà di Todo opzionali
 
 
-export type { TodoInfo, User, Project, TodoStatus };
+
+export type { TodoInfo, User, Project, TodoStatus, PartialTodo };

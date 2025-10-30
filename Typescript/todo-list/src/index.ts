@@ -165,3 +165,16 @@ import { filterTodos } from "./utils";
 
 const completedTodos = filterTodos(todos, true);
 console.log("Todo completati:", completedTodos);
+
+// updatePartialTodo 
+const updatePartialTodo = (todoId: number, updates: Partial<TodoInfo>): void => {
+	const todo = todos.find((t) => t.id === todoId);
+	if (todo) {
+		console.log("Todo con id", todoId, "prima dell'aggiornamento:", todo);
+		Object.assign(todo, updates);
+		console.log("Todo con id", todoId, "dopo l'aggiornamento:", todo);
+	} else {
+		console.log(`Todo con id ${todoId} non trovato.`);
+	}
+};
+updatePartialTodo(2, { title: "Fare la spesa e cucinare", completed: false });
